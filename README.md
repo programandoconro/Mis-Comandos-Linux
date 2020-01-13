@@ -104,12 +104,16 @@ Si utilizamos >> agregamos el texto sin reemplazar el archivo. 
 
 Si queremos aplicar un comando a un archivo, por ejemplo, un sript mysql, usamos "<" 
 
-mariadb --user=root --password -s < mariadb.sql
+```mariadb --user=root --password -s < mariadb.sql```
 
 Para echar un ojo a un archivo corto:
 
- ```cat nombrearchivo```
-
+ ```
+ cat archivo
+ more archivo
+ less archivo
+ ```
+ 
 Con el editor nano podemos ver y editar archivos más grandes:
 
  ```nano nombrearchivo```
@@ -324,7 +328,7 @@ Conocer la cantidad de filas en una archivo
 ```wc -l archivo```
 
 
-Para acceder a las primeras y últimas filas:
+Para acceder a las 10 primeras y últimas filas:
 
  ```
  head -10 archivo
@@ -347,10 +351,6 @@ Eliminar la primera fila de datos
 
 ```sed 1d *.txt```
 
-Seleccionar quinta columna
-
-```awk '{print $5}' *.txt``` 
-
 
 Cambiar el orden de columnas
 
@@ -361,13 +361,13 @@ ps -ef | awk -F " " '{print $2}'
 ```
 
 Cortar una sección intermedia de filas
-```sed -n '250, 260p' *.txt > **.txt```
+```sed -n '250, 260p' archivo1.txt > archivo2.txt```
 
 Para buscar archivos
 
 ```
 sudo apt-get install mlocate
-locate -i 
+locate -i archivo
 ```
 # Programas
 
