@@ -167,6 +167,13 @@ Para cambiar el nombre de la computadora:
 
 ```hostnamectl set-hostname nuevonombre```
 
+Enviar peticiones a servidores online o en red local
+
+```
+ping google.com
+ping 192.168.1.1
+```
+
 Ver los puertos abiertos en una red
 ```
 nmap localhost
