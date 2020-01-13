@@ -276,6 +276,9 @@ Los siguientes comandos utilizan systemctl para controlar servicios del sistema.
  systemctl stop nombreservicio
  systemctl disable nombreservicio
 ```
+Reiniciar Wifi 
+
+```service network-manager restart```
 
 Detener proceso 
 
@@ -503,9 +506,17 @@ cat myDocument.pdf | ssh me.myserver.com nc -l -p 20000
 # cliente
 nc me.myserver.com 20000 > myDocument.pdf
  ```
- IP del servidor DNS
+ IP del proveedor de Internet
  
  ``` grep nameserver  /etc/resolv.conf | awk '{print $2}'```
+ 
+ IP del servidor local
+ 
+ ```ip route show |grep default | awk '{print $3}' | cut -d$'\n' -f1```
+ 
+ IP local del dispositivo
+ 
+ ```ip address show $interface | grep "inet " | awk '{print $2}'```
  
 # IOT
 
