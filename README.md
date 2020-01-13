@@ -8,6 +8,20 @@ Si el usuario pertenece al grupo de administradores
 
 ```sudo -i``` 
 
+Actualizar 
+
+ ```
+ sudo -i
+ apt update -y
+ apt upgrade -y
+ apt autoremove -y
+ 
+ ```
+o
+
+``` apt update -y && apt upgrade -y && apt autoremove -y```
+
+
 Crear Usuario
 
 ```sudo useradd nombreusuario```
@@ -28,19 +42,14 @@ Para ver los grupos a los que pertenece el usuario
 
 ```group nombreusuario``` 
 
+Para saber el nombre del host
 
-Actualizar 
-
- ```
- sudo -i
- apt update -y
- apt upgrade -y
- apt autoremove -y
+```hostname```
  
- ```
-O,
+Para cambiar el nombre
 
-``` apt update -y && apt upgrade -y && apt autoremove -y```
+```hostnamectl set-hostname nuevonombre```
+
 
 Instalar todo tipo de programas en Linux, por ejemplo, htop: 
 
@@ -158,14 +167,10 @@ Ip y Wifi.
  ip address
  iwconfig
 ```
- 
-Para saber el nombre del host.
+Ruta
 
-```hostname```
+```route```
  
-Para cambiar el nombre de la computadora:
-
-```hostnamectl set-hostname nuevonombre```
 
 Enviar peticiones a servidores online o en red local
 
@@ -548,7 +553,7 @@ Busca el dispositivo y ajustar el volumen
 
 ```amixer sset 'PCM' 100%```
 
-# Ciclos Loop
+# Ciclos y condiciones
 
 ## For 
 
@@ -561,7 +566,7 @@ Busca el dispositivo y ajustar el volumen
                 echo item: $i
             done
       
-## Otro For 
+## Otro ejemplo For 
 
             #!/bin/bash
             for i in `seq 1 10`;
@@ -584,6 +589,15 @@ Busca el dispositivo y ajustar el volumen
                  echo COUNTER $COUNTER
                  let COUNTER-=1
              done
+             
+## If
+
+    #!/bin/bash
+    if [ 1 == 2 ] then 
+        echo 'true'; 
+        else echo 'false'; 
+    fi
+ 
              
 ###########################################################################
 
