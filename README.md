@@ -496,6 +496,10 @@ cat myDocument.pdf | ssh me.myserver.com nc -l -p 20000
 # cliente
 nc me.myserver.com 20000 > myDocument.pdf
  ```
+ IP del servidor DNS
+ 
+ ``` grep nameserver  /etc/resolv.conf | awk '{print $2}'```
+ 
 # IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
