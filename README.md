@@ -1,4 +1,4 @@
-# Una lista de comandos Linux, por Ro
+# Una lista de comandos en Linux, por Ro
 
 Privilegios absolutos (root)
 
@@ -100,7 +100,7 @@ Crear un archivo con un texto corto:
 
 Si utilizamos >> agregamos el texto sin reemplazar el archivo. 
 
-``` echo "Agregamo texto nuevo" >> nombrearchivo```
+``` echo "Agregamos texto nuevo" >> nombrearchivo```
 
 Si queremos aplicar un comando a un archivo, por ejemplo, un sript mysql, usamos "<" 
 
@@ -463,6 +463,14 @@ conda activate r_env
  
  ```cmatrix```
 
+Al siguiente vale la pena echarle un ojo
+ 
+ ```telnet towel.blinkenlights.nl``` 
+ 
+Factores en la terminal:
+ 
+ ```factor 12```
+
 # COMANDOS NIVEL INTERMEDIO 
 
 Para ejecutar scripts al iniciar el sistema
@@ -477,6 +485,7 @@ Listar las aplicaciones desktop
 ```ls /usr/share/applications | awk -F '.desktop' ' { print $1}' -```
 
 Tiempo de procesos
+
 ```
 echo "sudo apt update -y" > myUpdate.sh 
 time bash myUpdate.sh
@@ -561,21 +570,19 @@ Busca el dispositivo y ajustar el volumen
               echo "hola $i"; 
           done
 
-           #!/bin/bash
+           
             for i in $( ls ); do
                 echo item: $i
-            done
-      
-## Otro ejemplo For 
+            done 
 
-            #!/bin/bash
+            
             for i in `seq 1 10`;
             do
                     echo $i
             done    
             
 ## While
-             #!/bin/bash 
+              
              COUNTER=0
              while [  $COUNTER -lt 10 ]; do
                  echo The counter is $COUNTER
@@ -583,7 +590,7 @@ Busca el dispositivo y ajustar el volumen
              done
     
 ## Until
-             #!/bin/bash 
+              
              COUNTER=20
              until [  $COUNTER -lt 10 ]; do
                  echo COUNTER $COUNTER
@@ -592,11 +599,10 @@ Busca el dispositivo y ajustar el volumen
              
 ## If
 
-    #!/bin/bash
-    if [ 1 == 2 ] then 
-        echo 'true'; 
-        else echo 'false'; 
-    fi
+             if [ 1 == 2 ] then 
+                echo 'true'; 
+                else echo 'false'; 
+             fi
  
              
 ###########################################################################
