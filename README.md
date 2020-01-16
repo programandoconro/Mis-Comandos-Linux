@@ -154,6 +154,18 @@ Para eliminar archivos y carpetas:
 ```
 Cuidado, ```#sudo rm -r /*```  destroza nuestro sistema, elimina todo
 
+Crear links a archivos es sencillo, por ejemplo, al "```archivo1```":
+
+```link archivo1 archivo2```
+
+Opcionalemente podemos utilizar:
+
+```ln archivo1 archivo2```
+
+Para crear links a directorios o entre particiones
+
+```ln -s /dir1 archivos```
+
 Para saber dispositivos conectados a los puertos USB:
 
 ```lsusb```
