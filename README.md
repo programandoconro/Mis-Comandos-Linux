@@ -485,6 +485,10 @@ Factores en la terminal:
 
 # COMANDOS NIVEL INTERMEDIO 
 
+Buscar paquetes que contienen algun comando que requerimos
+
+```apt search comando``` #(o ```yum search comando```)
+
 Para ejecutar scripts al iniciar el sistema
 ```
 cd ~
