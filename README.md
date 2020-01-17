@@ -170,11 +170,13 @@ Para saber dispositivos conectados a los puertos USB:
 
 ```lsusb```
  
-Ver las conexiones sockets de nuestro equipo
+Ver las conexiones en los sockets de nuestro equipo
 
 ``
 ss
 ss -l
+ss | grep tcp
+ss -t -a 
 `` 
 Ip y Wifi.
 
