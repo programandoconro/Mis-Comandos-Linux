@@ -558,7 +558,10 @@ iwconfig wlan1 mode monitor
 iwconfig
 airodump-ng -c 1 --bssid XX:XX:XX:XX:XX:XX:XX -w output wlan1
 ```
- 
+Escaneo de Redes Wifi Disponibles
+
+``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
+
 # IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
