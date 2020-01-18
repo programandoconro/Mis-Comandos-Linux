@@ -550,6 +550,15 @@ nc me.myserver.com 20000 > myDocument.pdf
  
  ```ip address show $interface | grep "inet " | awk '{print $2}'```
  
+Modo Monitor de Wifi y Sniffing con aircrack-ng (```apt install aircrack-ng```)
+ 
+ ```
+ifconfig wlan1 down
+iwconfig wlan1 mode monitor
+iwconfig
+airodump-ng -c 1 --bssid XX:XX:XX:XX:XX:XX:XX -w output wlan1
+```
+ 
 # IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
