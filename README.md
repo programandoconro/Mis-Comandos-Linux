@@ -1,4 +1,4 @@
-# Una lista de comandos en Linux, por Ro
+# Una lista de mis comandos Linux (Bash), por Ro
 
 Privilegios absolutos (root)
 
@@ -550,13 +550,15 @@ nc me.myserver.com 20000 > myDocument.pdf
  
  ```ip address show $interface | grep "inet " | awk '{print $2}'```
  
-Modo Monitor de Wifi y Sniffing con aircrack-ng (```apt install aircrack-ng```)
+Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (```apt install aircrack-ng```)
  
  ```
 ifconfig wlan1 down
 iwconfig wlan1 mode monitor
 iwconfig
+airdump-ng
 airodump-ng -c 1 --bssid XX:XX:XX:XX:XX:XX:XX -w output wlan1
+aircrack-ng -b 00:14:6C:7E:40:80 output.cap -w mydiccionary.txt 
 ```
 Escaneo de Redes Wifi Disponibles
 
