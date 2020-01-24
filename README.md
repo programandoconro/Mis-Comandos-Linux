@@ -1,4 +1,4 @@
-# Una lista de mis comandos Linux (Bash), por Ro
+# Una lista de comandos Bash en la terminal de Linux, por Ro
 
 Privilegios absolutos (root)
 
@@ -238,16 +238,6 @@ Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para De
 
  ```wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb```
 
- Bajar videos 
- 
-```
-youtube-dl #linkayoutube
-# solamente audio
-youtube-dl --extract audio --format mp3 
-```
-Con el programa vlc, podemos escuchar y controlar la música desde la línea de comandos. 
-
- ```cvlc /music```
 Almacenamiento de los discos
 
  ``df``
@@ -464,6 +454,24 @@ conda activate r_env
  conda install face_recognition # (o pip install face_recognition)
  
  ```
+ 
+# Descargar videos
+ 
+```
+youtube-dl $url
+# solamente audio
+youtube-dl --extract audio --format mp3 
+# Ver los formatos disponibles 
+youtube-dl -F $url
+```
+# VLC para controlar la música desde la línea de comandos. 
+
+ ```
+ cvlc /music
+ # para ver opciones de control:
+ vlc --help
+ ```
+ 
 # Juegos en Terminal
  
  ```
@@ -484,6 +492,8 @@ Al siguiente vale la pena echarle un ojo
 Factores en la terminal:
  
  ```factor 12```
+ 
+`
 
 # COMANDOS NIVEL INTERMEDIO 
 
