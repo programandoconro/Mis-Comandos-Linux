@@ -341,25 +341,29 @@ Para acceder a las 10 primeras y últimas filas:
 
 Si el archivo es demasiado grande, podemos separarlo en varias partes, por ejemplo, cinco:
 
-```split -n l/5 nombrearchivo x```
+```split -n l/5 archivo x```
 
 Para seleccionar la quinta columna, utilizamos:
 
-```awk '{print $5}' nombrearchivo```
+```awk '{print $5}' archivo```
 
 Separar columnas en función de un caracter, por ejemplo, dos puntos (:)
 
- ```cut -d ':' -f1 nombrearchivo```
+ ```cut -d ':' -f1 archivo```
 
-Eliminar la primera fila de datos
+Obtener la primera fila de datos
 
-```sed 1d *.txt```
+```sed 1d archivo```
+
+Eliminar la última línea de o fila de datos
+
+```sed -i '$ d' archivo```
 
 
 Cambiar el orden de columnas
 
 ```
-awk '{ print $3, $1 }' *.txt
+awk '{ print $3, $1 }' archivo.txt
 
 ps -ef | awk -F " " '{print $2}' 
 ```
