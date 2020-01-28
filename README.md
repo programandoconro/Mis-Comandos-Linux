@@ -1,4 +1,4 @@
-# Una lista de comandos Bash en la terminal de Linux, por Ro
+# Una lista de comandos favoritos en la terminal de Linux, por Ro
 
 Privilegios absolutos (root)
 
@@ -439,10 +439,10 @@ docker-compose -f docker-compose.yml up
 ```
 ## Tor 
 
-Para navegar de manera anónima.  Simplemente descárgalo (https://www.torproject.org/dist/torbrowser/8.5.4/tor-browser-linux64-8.5.4_en-US.tar.xz) 
+Para navegar de manera anónima.  Simplemente descárgalo de https://www.torproject.org y: 
 
  ```
- tar -xvJf tor-browser-linux64-8.5.4_en-US.tar.xz
+ tar -xvJf tor-browser-linux64-9.0.4_en-US.tar.xz 
  ./tor-browser_en-US/Browser/start-tor-browser &
  ```
 
