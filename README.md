@@ -264,13 +264,16 @@ Los procesos del sistema pueden mostrarse con:
 El signo | nos permite concatenar comandos (pipes).
 
 Imprimir todos los procesos en un momento determinado
+
 ```ps -ef```
 
+Detalles del Hardware y bios del sistema
+
+```dmidecode```
 
 Con neofetch podemos ver detalles de nuestro sistema de manera divertida. 
 
  ```neofetch```
- 
  
 Descomprimir archivos
  ```
