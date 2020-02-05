@@ -207,26 +207,7 @@ nmap -Pn 192.168.1.1/24 -p22 -open
 # Auditar 
 nmap -Pn **PublicIP**/24 
 ```
-Conectar por SSH
 
- ``` ssh usuario@servidor.local```
- 
-Conectar SSH sin password
- 
- ```
- ssh-keygen
- ssh-copy-id -i ~/.ssh/id_rsa.pub usuario@servidor.local
- ```
-Compartir archivos via SSH
-
-```scp nombrearchivo mi@servidor.local:~```
-
-
-Bloquear IPs
-
-```
- iptables -A INPUT -s $IPbloquear -j DROP
- ```
  
 Usuario y tiempo conectado
 ```
@@ -320,6 +301,25 @@ Controlar la accesibilidad de los archivos y carpetas de nuestro sistema, por ej
  #O para que solamente root pueda acceder a ellos:
  sudo chmod 700 nombrearchivo
 ```
+
+## Ver lista de fuentes 
+
+```nano /etc/apt/sources.list```
+
+## Información de la red 
+ 
+ IP del proveedor de Internet
+ 
+ ``` grep nameserver  /etc/resolv.conf | awk '{print $2}'```
+ 
+ IP del servidor local
+ 
+ ```ip route show |grep default | awk '{print $3}' | cut -d$'\n' -f1```
+ 
+ IP local del dispositivo
+ 
+ ```ip address show $interface | grep "inet " | awk '{print $2}'```
+
 # Manejo de archivos y Data Mining
 
 Para listar los archivos que tengan un patrón, por ejemplo, que terminen en .iso. 
@@ -500,11 +500,15 @@ Factores en la terminal:
  
  ```factor 12```
  
-`
+Provocar sonidos en el computador (apt install beep / yum install beep)
+
+```
+beep -f 4000 -D 500 -l 100 -r 100
+```
 
 # COMANDOS NIVEL INTERMEDIO 
 
-Buscar paquetes que contienen algun comando que requerimos
+## Buscar paquetes que contienen algun comando que requerimos
 
 ```apt search comando``` #(o ```yum search comando```)
 
@@ -515,17 +519,17 @@ sudo nano .bashrc
 # Escribe el script
 ./script
 ```
-Listar las aplicaciones desktop
+## Listar las aplicaciones desktop
 
 ```ls /usr/share/applications | awk -F '.desktop' ' { print $1}' -```
 
-Tiempo de procesos
+## Tiempo de procesos
 
 ```
 echo "sudo apt update -y" > myUpdate.sh 
 time bash myUpdate.sh
 ```
-Programar tareas
+## Programar tareas
 
 ```
 rm -f /var/run/crond.pid #delete pid
@@ -534,16 +538,31 @@ cron 00 00 *** myUpdate.sh #todos los dias a las 12
 Cambiar el tamaño de las fuente en terminal. 
 ```dpkg-reconfigure console-setup```
 
-Provocar sonidos en el computador (apt install beep / yum install beep)
+
+# SSH
+
+Conectar
+
+ ``` ssh usuario@servidor.local```
+ 
+ Conectar SSH sin password
+ 
+ ```
+ ssh-keygen
+ ssh-copy-id -i ~/.ssh/id_rsa.pub usuario@servidor.local
+ ```
+
+Compartir archivos
+
+```scp nombrearchivo mi@servidor.local:~```
+
+Bloquear IPs que intenten conectar sin permiso
 
 ```
-beep -f 4000 -D 500 -l 100 -r 100
-```
-Ver lista de fuentes 
+ iptables -A INPUT -s $IPbloquear -j DROP
+ ```
 
-```nano /etc/apt/sources.list```
-
-Cuando conectado por SSH, elegir en cual servidor mostrar el display. 
+Elegir en cual servidor mostrar el display. 
 ```
 export DISPLAY=:0 # en servidor
 export DISPLAY=:1 # en local
@@ -551,23 +570,15 @@ export DISPLAY=:1 # en local
 Enviar archivo via ncat por tunel ssh
 
 ```
-cat myDocument.pdf | ssh me.myserver.com nc -l -p 20000
+nc myDocument.pdf | ssh me.myserver.com nc -l -p 20000
 # cliente
 nc me.myserver.com 20000 > myDocument.pdf
  ```
- IP del proveedor de Internet
+Compartir la terminal en cualquier browser (```apt install tmate``` / ```yum install tmate```)
+
+```tmate```
  
- ``` grep nameserver  /etc/resolv.conf | awk '{print $2}'```
- 
- IP del servidor local
- 
- ```ip route show |grep default | awk '{print $3}' | cut -d$'\n' -f1```
- 
- IP local del dispositivo
- 
- ```ip address show $interface | grep "inet " | awk '{print $2}'```
- 
-Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (```apt install aircrack-ng```)
+# Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (```apt install aircrack-ng```)
  
  ```
 ifconfig wlan1 down
@@ -580,10 +591,6 @@ aircrack-ng -b 00:14:6C:7E:40:80 output.cap -w mydiccionary.txt
 Escaneo de Redes Wifi Disponibles
 
 ``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
-
-Compartir la terminal en cualquier browser (o terminal) con SSH seguro.
-
-```tmate```
 
 # IOT
 
