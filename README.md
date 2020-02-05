@@ -581,6 +581,10 @@ Escaneo de Redes Wifi Disponibles
 
 ``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
 
+Compartir la terminal en cualquier browser (o terminal) con SSH seguro.
+
+```tmate```
+
 # IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
