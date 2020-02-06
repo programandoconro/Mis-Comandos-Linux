@@ -50,13 +50,16 @@ Para cambiar el nombre
 
 ```hostnamectl set-hostname nuevonombre```
 
-
 Instalar todo tipo de programas en Linux, por ejemplo, htop: 
 
 ```sudo apt install htop -y```
 
+Instala programas con snap, por ejemplo, Android Studio:
+
+```sudo snap install android-studio --classic```
 
 Reiniciar, apagar en 30 min, apagar ahora.
+
 ```
  reboot
  shutdown -h +30
