@@ -38,6 +38,10 @@ Para cambiar la contraseña utilizamos:
 
 ```passwd```
 
+Para el root, utilizamos:
+
+```sudo passwd root```
+
 Para ver los grupos a los que pertenece el usuario
 
 ```group nombreusuario``` 
