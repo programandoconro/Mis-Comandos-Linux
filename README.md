@@ -387,6 +387,16 @@ Para buscar archivos
 sudo apt-get install mlocate
 locate -i archivo
 ```
+Instalar nuevos themes e íconos
+
+```
+apt search shell-theme # o dnf en Fedora
+apt search icon-theme
+
+apt install ... # dnf install ... 
+```
+
+
 # Programas
 
 ## Git
