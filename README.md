@@ -28,11 +28,11 @@ Crear Usuario
 
 Para agregar usuarios a grupos, por ejemplo, grupo sudo
 
-```usermod -aG sudo nombreusuario```
+```sudo usermod -aG sudo nombreusuario```
 
 Eliminar usuario
 
-```userdel nombreusuario```
+```sudo userdel nombreusuario```
 
 Para cambiar la contraseña utilizamos:
 
