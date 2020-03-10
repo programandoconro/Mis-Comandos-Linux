@@ -232,7 +232,7 @@ Almacenamiento de los discos
  
 Si queremos saber donde está un dispositivo USB, disco duro y sus particiones:
 
- ```fdisk -l```
+ ```sudo fdisk -l```
 
 Ejecutar Scripts de Bash, Python, R o JavaScript:
 
