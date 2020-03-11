@@ -302,16 +302,26 @@ Browser en terminal
 
 ``` elinks https://medium.com/learn-love-code/how-to-set-up-your-professional-data-science-environment-6df74eb06aa4 ```
 
-Controlar la accesibilidad de los archivos y carpetas de nuestro sistema, por ejemplo, dar todo tipo de acceso a un archivo:
-```
- sudo chmod a+rwx nombrearchivo
- #O para que solamente root pueda acceder a ellos:
- sudo chmod 700 nombrearchivo
-```
+# Comandos comunes que siempre olvido.
 
 ## Ver lista de fuentes 
 
 ```nano /etc/apt/sources.list```
+
+## Controlar los permisos para la accesibilidad de los archivos y carpetas de nuestro sistema, 
+```
+# por ejemplo, dar todo tipo de acceso a un archivo:
+ sudo chmod 777 nombrearchivo
+ sudo chmod a+rwx nombrearchivo
+ #O para que solamente root pueda acceder a ellos:
+ sudo chmod 700 nombrearchivo
+```
+## Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder a archivos "READ-ONLY"
+
+```
+sudo chown -hR root /u
+    
+```    
 
 ## Información de la red 
  
