@@ -494,7 +494,7 @@ conda activate r_env
 ```
 youtube-dl $url
 # solamente audio
-youtube-dl --extract audio --format mp3 
+youtube-dl --extract-audio --format mp3 
 # Ver los formatos disponibles 
 youtube-dl -F $url
 ```
