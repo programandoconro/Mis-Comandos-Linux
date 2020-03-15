@@ -556,6 +556,10 @@ sudo nano .bashrc
 echo "sudo apt update -y" > myUpdate.sh 
 time bash myUpdate.sh
 ```
+## Esperar 10 segundos. 
+
+```sleep 10```
+
 ## Programar tareas
 
 ```
@@ -564,7 +568,6 @@ cron 00 00 *** myUpdate.sh #todos los dias a las 12
 ````
 Cambiar el tamaño de las fuente en terminal. 
 ```dpkg-reconfigure console-setup```
-
 
 # SSH
 
