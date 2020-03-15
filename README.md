@@ -58,18 +58,14 @@ Instalar todo tipo de programas en Linux, por ejemplo, htop: 
 
 ```sudo apt install htop -y```
 
-Instala programas con snap, por ejemplo, Android Studio:
-
-```sudo snap install android-studio --classic```
-
-Reiniciar, apagar en 30 min, apagar ahora.
+Instala programas con snap (```apt install snapd```), por ejemplo, Android Studio y VLC:
 
 ```
- reboot
- shutdown -h +30
- poweroff -f
- ```
- 
+snap install android-studio --classic
+snap install vlc --classic
+
+```
+
 Crear un USB bootable con cualquier imagen de Linux.  
 
  ```sudo dd bs=4M if=***.iso of=/dev/sdb status=progress```
@@ -706,6 +702,15 @@ Busca el dispositivo y ajustar el volumen
  
              
 ###########################################################################
+
+Como despedida ... reiniciar, apagar en 30 min, apagar ahora, respectivamente.
+
+```
+ reboot
+ shutdown -h +30
+ poweroff -f
+ ```
+ 
 
 # Links a Posts Relacionados:
 
