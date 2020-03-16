@@ -200,13 +200,16 @@ ping google.com
 ping 192.168.1.1
 ```
 
-Ver los puertos abiertos en una red
+## Ver los puertos abiertos en una red (```apt install nmap```)
 ```
 nmap localhost
+
 # Para evaluar la red local entera:
 nmap 192.168.1.1/24 #(o 192.168.0.1/24)
+
 #filtrar por puerto y estado 
 nmap -Pn 192.168.1.1/24 -p22 -open  
+
 # Auditar 
 nmap -Pn **PublicIP**/24 
 ```
@@ -255,17 +258,18 @@ Detalles del Hardware y bios del sistema
 
 ```dmidecode```
 
-Con neofetch podemos ver detalles de nuestro sistema de manera divertida. 
+Con neofetch podemos ver detalles de nuestro sistema de manera divertida (```apt install neofetch```)
 
  ```neofetch```
  
 Descomprimir archivos
+ 
  ```
  unzip *.zip
  gunzip example.txt.gz
  ```
 
-Instalación de aplicaciones .deb. Tambien es posible usar gdebi. 
+Instalación de aplicaciones .deb. Tambien es posible usar ```gdebi```. 
 
 ``` dpkg -i archivo.deb && apt install -f```
 
@@ -343,7 +347,7 @@ Para saber el número de archivos en una carpeta:
 
 ``` ls | wc -l```
 
-Conocer la cantidad de filas en una archivo
+Conocer la cantidad de filas en un archivo
 
 ```wc -l archivo```
 
@@ -371,7 +375,7 @@ Obtener la primera fila de datos
 
 ```sed 1d archivo```
 
-Eliminar la última línea de o fila de datos
+Eliminar la última línea o fila de datos
 
 ```sed -i '$ d' archivo```
 
@@ -393,7 +397,7 @@ Para buscar archivos
 sudo apt-get install mlocate
 locate -i archivo
 ```
-Instalar nuevos themes e íconos
+## Instalar nuevos themes e íconos
 
 ```
 apt search shell-theme # o dnf en Fedora
@@ -401,7 +405,6 @@ apt search icon-theme
 
 apt install ... # dnf install ... 
 ```
-
 
 # Programas
 
