@@ -58,9 +58,10 @@ Instalar todo tipo de programas en Linux, por ejemplo, htop: 
 
 ```sudo apt install htop -y```
 
-Instala programas con snap (```apt install snapd```), por ejemplo, Android Studio y VLC:
+Instala programas con snap (```apt install snapd```), por ejemplo, VScode, Android Studio y VLC:
 
 ```
+snap install code --classic
 snap install android-studio --classic
 snap install vlc --classic
 
