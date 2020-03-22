@@ -176,12 +176,13 @@ Para saber dispositivos conectados a los puertos USB:
  
 Ver las conexiones en los sockets de nuestro equipo
 
-``
+```
 ss
 ss -l
 ss | grep tcp
 ss -t -a 
-`` 
+```
+
 IP local y Wifi.
 
 ```
