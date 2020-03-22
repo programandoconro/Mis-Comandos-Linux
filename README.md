@@ -182,13 +182,18 @@ ss -l
 ss | grep tcp
 ss -t -a 
 `` 
-Ip y Wifi.
+IP local y Wifi.
 
 ```
  ifconfig
  ip address
  iwconfig
 ```
+
+IP pública
+
+```curl https://ipinfo.io/ip```
+
 Ruta
 
 ```route```
