@@ -575,6 +575,10 @@ cron 00 00 *** myUpdate.sh #todos los dias a las 12
 Cambiar el tamaño de las fuente en terminal. 
 ```dpkg-reconfigure console-setup```
 
+Kill procesos en un socket determinado
+
+```sudo lsof -t -i tcp:8000 | xargs kill -9```
+
 # SSH
 
 Conectar
