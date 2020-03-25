@@ -228,9 +228,6 @@ uname -r
 uptime -p
 ```
 
-Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para Debian 10 y Ubuntu 19. 
-
- ```wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb```
 
 Almacenamiento de los discos
 
@@ -413,7 +410,18 @@ apt search icon-theme
 apt install ... # dnf install ... 
 ```
 
-# Programas
+# Programas importantes
+
+## Wget 
+
+Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para Debian 10 y Ubuntu 19. 
+
+ ```wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb```
+
+Para descargar archivos de un servidor o website. 
+
+```wget -A pdf,csv,txt,png,jpg -m -p -E -k -K -np 192.168.1.48```
+
 
 ## Git
 
