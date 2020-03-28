@@ -571,9 +571,17 @@ Kill procesos en un socket determinado
 
 ```sudo lsof -t -i tcp:8000 | xargs kill -9```
 
- Asignar "alias" a comandos, por ejemplo:
+Asignar "alias" a comandos, por ejemplo:
 
 ```alias python=python3```
+
+Formatear USB:
+
+``` 
+fdisk -l # encontramos el dispositivo, por ejemplo sdc1.
+umount /dev/sdc1
+sudo mkfs -t vfat /dev/sdc1
+``` 
 
 ## Hacking:
 
