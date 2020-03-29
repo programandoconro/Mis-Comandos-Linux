@@ -769,12 +769,14 @@ Busca el dispositivo y ajustar el volumen
              
 ###########################################################################
 
-Como despedida ... reiniciar, apagar en 30 min, apagar ahora, respectivamente.
+Como despedida ... salir, reiniciar, apagar en 30 min, apagar ahora, respectivamente.
 
 ```
+ exit
  reboot
  shutdown -h +30
  poweroff -f
+ 
  ```
  
 
