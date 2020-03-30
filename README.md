@@ -90,6 +90,10 @@ Ver la historia del terminal
 
 ```history```
 
+Mostrar toda la estructura de los ficheros:
+
+```tree```
+
 Montar USB externo
 
 ```sudo mount -rw /dev/sd* /carpeta```
