@@ -400,8 +400,11 @@ Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para De
 
 Para descargar archivos de un servidor o website. 
 
-```wget -A pdf,csv,txt,png,jpg -m -p -E -k -K -np 192.168.1.48```
+```wget -A pdf,csv,txt,png,jpg -m -p -E -k -K -np www.programandoconro.wordpress.com```
 
+Descargar el index.html y los links asociados al website.
+
+```wget -rpk www.programandoconro.wordpress.com```
 
 ### Git
 
