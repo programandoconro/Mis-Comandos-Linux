@@ -495,6 +495,10 @@ youtube-dl --extract-audio --format mp3
 # Ver los formatos disponibles 
 youtube-dl -F $url
 ```
+### Cambiar formato .avi a .mp4
+
+```ffmpeg -i input.avi -strict -2 output.mp4```
+
 ### VLC para controlar la música desde la línea de comandos. 
 
  ```
