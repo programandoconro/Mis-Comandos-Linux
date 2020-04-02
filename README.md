@@ -699,7 +699,15 @@ Enviar archivo via ncat por tunel ssh
 nc myDocument.pdf | ssh me.myserver.com nc -l -p 20000
 # cliente
 nc me.myserver.com 20000 > myDocument.pdf
+
  ```
+### Script al iniciar el sistema (boot).
+
+```
+sudo crontab -e
+# Add line to file (here a python script):
+@reboot python3 /home/pi/Desktop/exemple.py &
+```
 
 ## IOT
 
