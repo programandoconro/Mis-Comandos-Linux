@@ -696,8 +696,18 @@ nc -l -vv -p 5000
 nc 192.168.56.1 5000
 
 ```
+Enviar archivo (inseguro)
 
-Enviar archivo via ncat por tunel ssh
+```
+Receptor escucha:
+nc -l -p 9999 > test.txt
+
+El otro lado envía:
+nc 192.168.0.1 9999 < test.txt
+
+```
+
+Enviar archivo via ncat por tunel ssh (Seguro)
 
 ```
 nc myDocument.pdf | ssh me.myserver.com nc -l -p 20000
