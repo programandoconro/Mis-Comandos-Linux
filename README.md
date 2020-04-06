@@ -22,7 +22,7 @@ o
 ``` apt update -y && apt upgrade -y && apt autoremove -y```
 
 
-Crear Usuario
+Crear usuario
 
 ```sudo useradd nombreusuario```
 
@@ -33,6 +33,14 @@ Para agregar usuarios a grupos, por ejemplo, grupo sudo
 Eliminar usuario
 
 ```sudo userdel nombreusuario```
+
+Ver usuarios y detalles del host
+
+```
+users
+hostnamectl
+
+```
 
 Para cambiar la contraseña utilizamos:
 
