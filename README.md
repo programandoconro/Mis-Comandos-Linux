@@ -15,12 +15,10 @@ Actualizar
  apt update -y
  apt upgrade -y
  apt autoremove -y
- 
  ```
 o
 
 ``` apt update -y && apt upgrade -y && apt autoremove -y```
-
 
 Crear usuario
 
@@ -39,7 +37,6 @@ Ver usuarios y detalles del host
 ```
 users
 hostnamectl
-
 ```
 
 Para cambiar la contraseña utilizamos:
@@ -72,7 +69,6 @@ Instala programas con snap (```apt install snapd```), por ejemplo, VScode, Andro
 snap install code --classic
 snap install android-studio --classic
 snap install vlc --classic
-
 ```
 
 Crear un USB bootable con cualquier imagen de Linux.  
@@ -318,10 +314,7 @@ Controlar los permisos para la accesibilidad de los archivos y carpetas de nuest
 ```
 Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder a archivos "READ-ONLY"
 
-```
-sudo chown -hR root /u
-    
-```    
+```sudo chown -hR root /u```    
 
 ## Información de la red 
  
@@ -428,17 +421,11 @@ Los commits y los push también pueden realizarse de esta manera o directamente 
 
 ```
 git add .
-
 git diff --cached
-
 git commit -m 'comment'
-
 git push -u origin master
-
 git checkout -b 'robranch' #o (git switch robranch)
-
 git push origin robranch
-
 git branch -a
 ```
 Más opciones y comandos de git: 
@@ -521,7 +508,6 @@ youtube-dl -F $url
  apt-get install bastet moon-buggy ninvaders nsnake pacman4console neofetch figlet -y
  bastet
  moon-buggy
- ...
  figlet HOLA AMIGO 
  ``` 
  El próximo comando te hará sentir en la matrix. (apt install cmatrix)
@@ -646,7 +632,7 @@ Compartir archivos
 Bloquear IPs que intenten conectar sin permiso
 
 ```
- iptables -A INPUT -s $IP -j DROP
+iptables -A INPUT -s $IP -j DROP
  ```
 
 Elegir en cual servidor mostrar el display. 
@@ -702,7 +688,6 @@ Chat
 ```
 nc -l -vv -p 5000
 nc 192.168.56.1 5000
-
 ```
 Enviar archivo (inseguro)
 
@@ -712,7 +697,6 @@ nc -l -p 9999 > test.txt
 
 El otro lado envía:
 nc 192.168.0.1 9999 < test.txt
-
 ```
 
 Enviar archivo via ncat por tunel ssh (Seguro)
@@ -761,7 +745,7 @@ Busca el dispositivo y ajustar el volumen
 
 ```amixer sset 'PCM' 100%```
 
-## Ciclos y condiciones
+## Programación (Bash Script)
 
 ### For 
 
@@ -802,6 +786,10 @@ Busca el dispositivo y ajustar el volumen
                 echo 'true'; 
                 else echo 'false'; 
              fi
+             
+### Aritmética   
+
+             echo $((((2+2-3)*3)/3))
  
              
 ###########################################################################
