@@ -790,6 +790,13 @@ Busca el dispositivo y ajustar el volumen
 ### Aritmética   
 
              echo $((((2+2-3)*3)/3))
+             
+### Funciones
+
+             function chao {
+               echo 'Chao amigo!';
+               exit;
+             }
  
              
 ###########################################################################
