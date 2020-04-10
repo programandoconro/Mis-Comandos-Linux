@@ -86,6 +86,10 @@ Regresar al directorio anterior
 
  ```cd ..```
 
+Saber el directorio en el que estamos
+
+```pwd```
+
 Limpiar la pantalla en la terminal
 
 ``` clear # o Crtl-L```
