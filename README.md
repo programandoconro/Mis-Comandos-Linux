@@ -526,6 +526,10 @@ Factores en la terminal:
  
  ```factor 12```
  
+Voltea la palabra que introduzcas
+
+```rev``` agrega 123, por ejemplo. 
+ 
 Provocar sonidos en el computador (apt install beep / yum install beep)
 
 ```
