@@ -789,10 +789,11 @@ Busca el dispositivo y ajustar el volumen
              done
              
 ### If
-
-             if [ 1 == 2 ] then 
-                echo 'true'; 
-                else echo 'false'; 
+             
+             if [ 'hola' == "hola" ]; then
+             echo TRUE;
+             else 
+             echo FALSE;
              fi
              
 ### Aritmética   
