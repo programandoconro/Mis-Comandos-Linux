@@ -790,7 +790,7 @@ Busca el dispositivo y ajustar el volumen
              
 ### If
              
-             if [ 'hola' == "hola" ]; then
+             if [ hola == hola ]; then
              echo TRUE;
              else 
              echo FALSE;
