@@ -452,14 +452,32 @@ Tutorial de git
 ### Docker (o Podman)
 
 ``` 
- docker ps -a
- docker images
- docker run -it ubuntu 
- docker build . -tagname  # Necesitas un archivo Dockerfile en el directorio
+docker run -it ubuntu 
+docker images
 
-# docker-compose
-docker-compose -f docker-compose.yml up
 ```
+Dockerfile:
+
+```
+FROM
+MAINTAINER
+COPY
+ADD
+RUN
+EXPOSE
+CMD
+```
+
+```
+docker build . -t example  
+docker run example
+docker ps -a
+docker exec $ID bash
+```
+
+Docker-compose
+``docker-compose -f docker-compose.yml up``
+
 ### Tor 
 
 Para navegar de manera anónima.  Simplemente descárgalo de https://www.torproject.org y: 
@@ -820,7 +838,6 @@ Como despedida ... salir, reiniciar, apagar en 30 min, apagar ahora, respectivam
  
  ```
  
-
 # Links a Posts Relacionados:
 
 https://programandoconro.wordpress.com/2019/10/02/mis-99-comandos-favoritos-en-gnu-linux/
