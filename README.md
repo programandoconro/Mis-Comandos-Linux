@@ -326,9 +326,13 @@ touch example
 ls | egrep example
 
 ```
-Después de patrón:
+Buscar palabra en archivo
+
+``look texto archivo`` o ``grep texto archivo``
+
+ Encontrar después de patrón:
 ```
-echo "field1 field2 field3 field4" | grep -oP '(?<=field3 )[^ ]*'
+ echo "field1 field2 field3 field4" | grep -oP '(?<=field3 )[^ ]*'
 ```
 Antes del patrón:
 ```
