@@ -320,6 +320,21 @@ Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder
 
 ```sudo chown -hR root /u```    
 
+## Encontrar palabras con ``grep`` o ``egrep``
+```
+touch example
+ls | egrep example
+
+```
+Después de patrón:
+```
+echo "field1 field2 field3 field4" | grep -oP '(?<=field3 )[^ ]*'
+```
+Antes del patrón:
+```
+echo "field1 field2 field3 field4" | grep -oP '(?<=field2 )\w+'
+```
+
 ## Información de la red 
  
  IP del proveedor de Internet
