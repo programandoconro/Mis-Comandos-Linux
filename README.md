@@ -550,18 +550,14 @@ youtube-dl -F $url
  El próximo comando te hará sentir en la matrix. (apt install cmatrix)
  
  ```cmatrix```
-
-Al siguiente vale la pena echarle un ojo
  
  ```telnet towel.blinkenlights.nl``` 
  
-Factores en la terminal:
+Factores en la terminal ```factor 12```
  
- ```factor 12```
- 
-Voltea la palabra que introduzcas
+Voltea la palabra que introduzcas ```rev``` agrega 123, por ejemplo. 
 
-```rev``` agrega 123, por ejemplo. 
+Repite un mensaje ``yes Viva Linux!!``
  
 Provocar sonidos en el computador (apt install beep / yum install beep)
 
@@ -647,7 +643,6 @@ nmap -Pn 192.168.1.1/24 -p22 -open
 # Auditar 
 nmap -Pn **PublicIP**/24 
 ```
-
 
 ### SSH
 
