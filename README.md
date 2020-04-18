@@ -480,22 +480,30 @@ Dockerfile:
 ```
 FROM
 MAINTAINER
+LABEL
 COPY
 ADD
 RUN
 EXPOSE
 CMD
+ENTRYPOINT
 ```
 
 ```
 docker build . -t example  
 docker run example
-docker ps -a
+docker ps
 docker exec $ID bash
+docker inspect $ID
+docker network ls
 ```
 
 Docker-compose
-``docker-compose -f docker-compose.yml up``
+```
+docker-compose up
+docker-compose start
+docker-compose stop
+```
 
 ### Tor 
 
