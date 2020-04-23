@@ -571,11 +571,9 @@ Voltea la palabra que introduzcas ```rev``` agrega 123, por ejemplo.
 
 Repite un mensaje ``yes Viva Linux!!``
  
-Provocar sonidos en el computador (apt install beep / yum install beep)
+Provocar sonidos en el computador (apt install beep / yum install beep) ```beep -f 4000 -D 500 -l 100 -r 100``
 
-```
-beep -f 4000 -D 500 -l 100 -r 100
-```
+También se puede hacer un banner, sencillamente: ``banner hola``
 
 Instalar nuevos themes e íconos
 
