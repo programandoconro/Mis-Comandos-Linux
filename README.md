@@ -681,14 +681,23 @@ Bloquear IPs que intenten conectar sin permiso
 iptables -A INPUT -s $IP -j DROP
  ```
 
-Elegir en cual servidor mostrar el display. 
+ Elegir en cual servidor mostrar el display. 
 
 ```
 export DISPLAY=:0 # en servidor
 export DISPLAY=:1 # en local
  ```
+ Reverse shell tunneling:
+ 
+ El cliente con Firewall se conecta a la computadora del desarrollador (dev), y envía su shell de manera reversa (``-R--``), creando un túnel.
+ 
+ ``ssh -R 19999:localhost:22 dev@publicIP``
+ 
+ El desarrollador escucha en el puerto 19999 y accede a la computadora del cliente (cli), gracias al túnel abierto.
+ 
+ ``ssh cli@localhost -p 19999``
 
-### Compartir la terminal en cualquier browser 
+### Compartir la terminal en el browser
 
 (```apt install tmate``` / ```yum install tmate```)
 
