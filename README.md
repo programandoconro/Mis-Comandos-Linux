@@ -696,6 +696,10 @@ export DISPLAY=:1 # en local
  El desarrollador escucha en el puerto 19999 y accede a la computadora del cliente (cli), gracias al túnel abierto.
  
  ``ssh cli@localhost -p 19999``
+ 
+ Redirigir un puerto (ej. 80) de una computadora remota al localhost (ej. 2002):
+ 
+ ``ssh -N -L2002:localhost:80 user@ip_machine``
 
 ### Compartir la terminal en el browser
 
