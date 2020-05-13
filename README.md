@@ -316,6 +316,9 @@ Controlar los permisos para la accesibilidad de los archivos y carpetas de nuest
  #O para que solamente root pueda acceder a ellos:
  sudo chmod 700 nombrearchivo
 ```
+Acceso a carpeta para todos los usuarios:
+```chmod ugo+rwx nombrecarpeta```
+
 Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder a archivos "READ-ONLY"
 
 ```sudo chown -hR root /u```    
