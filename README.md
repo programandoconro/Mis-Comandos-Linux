@@ -410,6 +410,8 @@ ps -ef | awk -F " " '{print $2}'
 Cortar una sección intermedia de filas
 ```sed -n '250, 260p' archivo1.txt > archivo2.txt```
 
+Crear un secuencia ``seq 1 10``
+
 Para buscar archivos
 
 ```
@@ -825,6 +827,8 @@ Busca el dispositivo y ajustar el volumen
             do
                     echo $i
             done    
+            
+            for e in {0..9};do echo $e🍀; done;
             
 ### While
               
