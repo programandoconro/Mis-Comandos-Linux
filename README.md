@@ -548,6 +548,12 @@ youtube-dl -F $url
 
 ```ffmpeg -i input.avi -strict -2 output.mp4```
 
+### Crear gifs animados (``ImageMagick``):
+
+```
+convert -delay 10 -loop 0 *.png mygif.gif
+```
+
 ### VLC para controlar la música desde la línea de comandos. 
 
  ```
