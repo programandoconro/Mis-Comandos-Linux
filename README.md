@@ -791,6 +791,16 @@ watch ls
 ```
 Si desde otras ventana agregas unos archivos, podrás ver los cambios en ventana que ejecuta watch. 
 
+### Crear tu propio comando.
+
+```
+sudo -i
+echo echo 'Hello World Linux' > mi-super-programa
+chmod +x mi-super-programa
+cp mi-super-programa /usr/bin/
+mi-super-comando
+
+```
 
 ## IOT
 
