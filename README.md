@@ -209,7 +209,7 @@ IP pública
 
 Ruta
 
-```route```
+```route -n```
  
 
 Enviar peticiones a servidores online o en red local
@@ -233,13 +233,7 @@ Si queremos saber donde está un dispositivo USB, disco duro y sus particiones:
 
  ```sudo fdisk -l```
 
-Ejecutar Scripts de Bash, Python, R o JavaScript:
 
-```
- bash archivo.sh
- python archivo.py
- Rscript archivo.R
- node archivo.js
  ```
 Los procesos del sistema pueden mostrarse con:
 
@@ -795,11 +789,9 @@ Si desde otras ventana agregas unos archivos, podrás ver los cambios en ventana
 
 ```
 sudo -i
-echo echo 'Hello World Linux' > mi-super-programa
-chmod +x mi-super-programa
-cp mi-super-programa /usr/bin/
+echo echo 'Hello World Linux' > mi-super-comando
+chmod +x mi-super-comando && cp mi-super-comando /usr/bin/
 mi-super-comando
-
 ```
 
 ## IOT
