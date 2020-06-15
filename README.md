@@ -784,6 +784,13 @@ sudo crontab -e
 # Add line to file (here a python script):
 @reboot python3 /home/pi/Desktop/exemple.py &
 ```
+### Ejecutar un comando cada 2 segundos.
+
+```
+watch ls
+```
+Si desde otras ventana agregas unos archivos, podrás ver los cambios en ventana que ejecuta watch. 
+
 
 ## IOT
 
