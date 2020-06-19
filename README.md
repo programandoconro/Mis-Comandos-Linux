@@ -209,7 +209,7 @@ IP pública
 
 Ruta
 
-```route```
+```route -n```
  
 
 Enviar peticiones a servidores online o en red local
@@ -233,13 +233,7 @@ Si queremos saber donde está un dispositivo USB, disco duro y sus particiones:
 
  ```sudo fdisk -l```
 
-Ejecutar Scripts de Bash, Python, R o JavaScript:
 
-```
- bash archivo.sh
- python archivo.py
- Rscript archivo.R
- node archivo.js
  ```
 Los procesos del sistema pueden mostrarse con:
 
@@ -410,6 +404,8 @@ ps -ef | awk -F " " '{print $2}'
 Cortar una sección intermedia de filas
 ```sed -n '250, 260p' archivo1.txt > archivo2.txt```
 
+Crear un secuencia ``seq 1 10``
+
 Para buscar archivos
 
 ```
@@ -545,6 +541,12 @@ youtube-dl -F $url
 ### Cambiar formato .avi a .mp4
 
 ```ffmpeg -i input.avi -strict -2 output.mp4```
+
+### Crear gifs animados (``ImageMagick``):
+
+```
+convert -delay 10 -loop 0 *.png mygif.gif
+```
 
 ### VLC para controlar la música desde la línea de comandos. 
 
@@ -782,6 +784,21 @@ sudo crontab -e
 # Add line to file (here a python script):
 @reboot python3 /home/pi/Desktop/exemple.py &
 ```
+### Ejecutar un comando cada 2 segundos.
+
+```
+watch ls
+```
+Si desde otras ventana agregas unos archivos, podrás ver los cambios en ventana que ejecuta watch. 
+
+### Crear tu propio comando.
+
+```
+sudo -i
+echo echo 'Hello World Linux' > mi-super-comando
+chmod +x mi-super-comando && cp mi-super-comando /usr/bin/
+mi-super-comando
+```
 
 ## IOT
 
@@ -831,6 +848,8 @@ Busca el dispositivo y ajustar el volumen
             do
                     echo $i
             done    
+            
+            for e in {0..9};do echo $e🍀; done;
             
 ### While
               
