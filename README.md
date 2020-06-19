@@ -638,6 +638,12 @@ umount /dev/sdc1
 sudo mkfs -t vfat /dev/sdc1
 ``` 
 
+Controlar luz de la pantalla:
+
+```
+echo 8 > /sys/class/backlight/intel_backlight/brightness
+```
+
 ## Hacking:
 
 ### Nmap 
@@ -687,8 +693,8 @@ iptables -A INPUT -s $IP -j DROP
  Elegir en cual servidor mostrar el display. 
 
 ```
-export DISPLAY=:0 # en servidor
-export DISPLAY=:1 # en local
+export DISPLAY=:0 # en el servidor local
+export DISPLAY=:1 # en el servidor remoto
  ```
  Reverse shell tunneling:
  
