@@ -1,4 +1,4 @@
-# Una lista de comandos favoritos en la terminal de Linux, por Ro
+# Una lista de comandos favoritos en Linux, por Ro
 
 Privilegios absolutos (root)
 
@@ -12,16 +12,32 @@ Si el usuario pertenece al grupo de administradores
 sudo -i
 ``` 
 
-Actualizar 
+Para saber que distro de linux tienes
+
+```
+uname -a
+```
+
+Actualizar Debian/Ubuntu
 
  ```
- sudo -i
  apt update -y
  apt upgrade -y
- apt autoremove -y
  ```
-o
+En Fedora/Centos se utiliza yum para gestionar los paquetes
 
+```
+yum update -y
+```
+
+Arch/Manjaro
+
+```
+pacman -Syy
+pacman -Su
+```
+
+Puedes usar '&&' para varios comandos seguidos 
 ```
  apt update -y && apt upgrade -y && apt autoremove -y
  ```
@@ -87,12 +103,17 @@ Instalar todo tipo de programas en Linux, por ejemplo, htop: 
 sudo apt install htop -y
 ```
 
-Instala programas con snap (``apt install snapd``), por ejemplo, VScode, Android Studio y VLC:
+Instala programas con snap (``apt install snapd`` o ``yum install snapd``), por ejemplo, VScode, Android Studio y VLC:
 
 ```
 snap install code --classic
 snap install android-studio --classic
 snap install vlc --classic
+```
+En Arch/Manjaro no necesitamos snap, ya en con ``yay`` encontramos todo lo que necesitamos
+
+```
+yay -S vim code android-studio vlc
 ```
 
 Crear un USB bootable con cualquier imagen de Linux.  
