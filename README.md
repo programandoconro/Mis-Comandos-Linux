@@ -152,6 +152,7 @@ Ver la historia del terminal
 ```
 history
 ```
+* Para limpiar el historial ``history -c`` (bash)
 
 Mostrar toda la estructura de los ficheros:
 
@@ -588,13 +589,15 @@ Para actualizar el repositorio local a partir de GitHub:
 Los commits y los push también pueden realizarse de esta manera o directamente en GitHub. 
 
 ```
-git add .
-git diff --cached
+git add . # Agregar todos los archivos 
+git add /path/to/file # Agregar un archivo concreto
+git diff --cached 
 git commit -m 'comment'
 git push -u origin master
-git checkout -b 'robranch' #o (git switch robranch)
+git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
 git push origin robranch
-git branch -a
+git branch -a # Ver las branchs
+git fetch --all # Actualizar las branchs
 ```
 Más opciones y comandos de git: 
 ```
@@ -612,6 +615,8 @@ git help -g
 Tutorial de git
 
 ``git help tutorial``
+
+Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
 
 ### Docker (o Podman)
 
@@ -801,10 +806,10 @@ umount /dev/sdc1
 sudo mkfs -t vfat /dev/sdc1
 ``` 
 
-Controlar luz de la pantalla:
+Controlar luz de la pantalla (Debes encontrar el archivo ``brightness``):
 
 ```
-echo 8 > /sys/class/backlight/intel_backlight/brightness
+echo 8 > /sys/class/backlight/intel_backlight/brightness 
 ```
 
 ## Hacking:
