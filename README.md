@@ -812,6 +812,17 @@ Controlar luz de la pantalla (Debes encontrar el archivo ``brightness``):
 echo 8 > /sys/class/backlight/intel_backlight/brightness 
 ```
 
+Escribir un script de varias líneas en la terminal sin usar un editor.
+
+```
+cat <<EOF > print.sh
+#!/bin/bash
+echo esta es una línea
+echo esta es otra línea
+EOF
+```
+``sh print.sh``
+
 ## Hacking:
 
 ### Nmap 
