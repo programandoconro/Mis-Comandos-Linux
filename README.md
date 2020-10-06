@@ -300,12 +300,14 @@ IP local y Wifi.
 IP pública
 
 ```
+curl ifconfig.me
 curl https://ipinfo.io/ip
 ```
 
 Ruta
 
 ```
+ip route
 route -n
 ```
  
