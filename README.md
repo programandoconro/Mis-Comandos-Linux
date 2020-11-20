@@ -825,6 +825,10 @@ EOF
 ```
 ``sh print.sh``
 
+Ejecutar un script cada vez que iniciemos una sesión, por ejemplo, un programa ``python``:
+
+``sudo vim /etc/profile`` y agregamos al final ``sudo python /carpeta/con/el/programa/nombreprograma.py &``
+
 ## Hacking:
 
 ### Nmap 
