@@ -703,6 +703,10 @@ ffmpeg -i input.avi -strict -2 output.mp4
 convert -delay 10 -loop 0 * .png mygif.gif
 ```
 
+### Ver fotos en la terminal(``apt install fbi``:
+
+```fbi foto.png ```
+
 ### VLC para controlar la música desde la línea de comandos. 
 
  ```
