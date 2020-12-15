@@ -554,6 +554,53 @@ locate -i archivo
 
 ## Programas importantes
 
+### SSH
+Instalar
+```
+sudo apt-get install openssh-server -y
+sudo systemctl enable ssh 
+sudo systemctl start ssh
+sudo systemclt status ssh
+```
+
+Agregar llaves para no usar contraseñas.
+```
+ssh-keygen
+ssh-copy-id -i ~/.ssh/id_rsa.pub UserName@RemoteServer
+ssh-add
+```
+Copiar archivos local --> remoto
+
+```
+scp /dir/al/archivo user@remote.local:~/Destino/
+scp -P 22 -r /dir/ user@remote:~/Destino/
+```
+Copiar archivos remoto --> local
+```
+scp user@ip:file.txt /path/to/dest 
+```
+Comandos a distancia
+
+``ssh user@remote.local ls``
+
+Para conectar fuera de la red local necesitamos la IP pública del router y haber abierto un túnel para un servidor local
+
+``ssh user@IP`` 
+
+
+Firewall
+```
+ufw allow 22/tcp # o ufw allow 2222/tcp
+ufw allow from 202.54.1.1 to any port 22
+ufw limit ssh
+ufw status
+```
+Detener y deshabilitar:
+```
+systemctl stop ssh
+systemclt disable ssh
+```
+
 ### Wget 
 
 Descargar archivos desde la terminal, por ejemplo, instalador de RStudio para Debian 10 y Ubuntu 19. 
@@ -1126,4 +1173,4 @@ Como despedida ... salir, reiniciar, apagar en 30 min, apagar ahora, respectivam
 
 https://programandoconro.wordpress.com/2019/10/02/mis-99-comandos-favoritos-en-gnu-linux/
 https://programandoconro.wordpress.com/2020/01/02/10-trucos-en-linux-para-programadores-principiantes/
-
+https://programandoconro.wordpress.com/ssh-accede-a-tu-red-local-y-programa-remotamente/
