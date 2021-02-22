@@ -552,6 +552,12 @@ sudo apt-get install mlocate
 locate -i archivo
 ```
 
+Localizar un comando:
+
+```
+which python
+```
+
 ## Programas importantes
 
 ### SSH
