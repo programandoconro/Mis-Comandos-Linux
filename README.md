@@ -385,6 +385,12 @@ Reiniciar Wifi
 service network-manager restart
 ```
 
+``nohup`` para jecutar un comando o script en background, por ejemplo, un scrip de Python.
+
+```
+nohub python3 main.py > flask.log 2>&1 &
+```
+
 Detener proceso 
 
  ```
