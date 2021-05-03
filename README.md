@@ -913,6 +913,17 @@ Asignar "alias" a comandos, por ejemplo:
 alias python=python3
 ```
 
+Crear tu propio comando:
+
+```
+echo "echo MI PROPIO COMANDO" > micomando.sh
+chmod +x micomando.sh
+sudo mv micomando.sh /usr/bin/
+
+micomando
+
+```
+
 Formatear USB:
 
 ``` 
