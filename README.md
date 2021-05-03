@@ -1214,9 +1214,16 @@ vim /etc/motd
 ### If
              
              if [ hola == hola ]; then
-             echo TRUE;
-             else 
-             echo FALSE;
+                 echo TRUE;
+                 else 
+                     echo FALSE;
+             fi
+             
+             VAR="Hello Amit";
+             if [[ $VAR == *Amit* ]];
+                 then echo "its Amit";
+                 else
+                     echo "Its not Amit";
              fi
              
 ### Aritmética   
