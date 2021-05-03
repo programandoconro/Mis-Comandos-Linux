@@ -1183,7 +1183,8 @@ vim /etc/motd
 
            
             for i in $( ls ); do
-                echo item: $i
+                echo item: $i;
+                sleep 1;
             done 
 
             
