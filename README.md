@@ -916,9 +916,9 @@ alias python=python3
 Crear tu propio comando:
 
 ```
-echo "echo MI PROPIO COMANDO" > micomando.sh
-chmod +x micomando.sh
-sudo mv micomando.sh /usr/bin/
+echo "echo MI PROPIO COMANDO" > micomando
+chmod +x micomando
+sudo mv micomando /usr/bin/
 
 micomando
 
