@@ -1078,6 +1078,12 @@ Asignar "alias" a comandos, por ejemplo:
 ```
 alias python=python3
 ```
+Para que estos cambios sean permanentes, puedes agreagar un ``alias`` en el archivo ``bashrc``:
+
+```
+echo "alias python='python3.9'" >> ~/.bashrc
+source ~/.bashrc
+```
 
 Crear tu propio comando:
 
