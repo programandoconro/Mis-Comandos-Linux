@@ -793,7 +793,9 @@ Desplazamiento:
 
 ``:55`` -> Ir a línea 55.
 
-``Ctrl o`` -> Regresar a la línea donde se estaba previamente.
+``Ctrl O`` -> Navegar entre posiciones.
+
+`` '' `` -> Navegar a la posición previa. 
 
 ``f + {`` -> Va directamente al siguiente ``{``. Funciona para otros caracteres, por ejemplo: ``[ , ( , [a-z], [0-9] ,``, etc.
 
