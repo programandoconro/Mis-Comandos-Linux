@@ -310,7 +310,6 @@ Ruta
 ip route
 route -n
 ```
- 
 
 Enviar peticiones a servidores online o en red local
 
@@ -1058,7 +1057,14 @@ time bash myUpdate.sh
 sleep 10
 ```
 
- Programar tareas
+Asignar nombre a variable introducida por el usuario:
+
+```
+read -p "Enter a word: " word
+echo "You entered $word"
+```
+
+Programar tareas
 
 ```
 rm -f /var/run/crond.pid #delete pid
