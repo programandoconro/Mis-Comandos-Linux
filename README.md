@@ -671,9 +671,13 @@ git log --stat --summary
 git help -a 
 git help -g
 ```
-
+Revertir commit:
+```
+git log --oneline # Para obtener la id del commit al que desear regresar.
+git checkout <commit-id>
+git add . && git commit "Go back" && git push origin <branch>
+```
 Tutorial de git
-
 ``git help tutorial``
 
 Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
@@ -1103,9 +1107,7 @@ sudo mv micomando /usr/bin/
 micomando
 
 ```
-
 Formatear USB:
-
 ``` 
 fdisk -l # encontramos el dispositivo, por ejemplo sdc1.
 umount /dev/sdc1
@@ -1227,11 +1229,8 @@ aircrack-ng -b 00:14:6C:7E:40:80 output.cap -w mydiccionary.txt
 ```
 Escaneo de Redes Wifi Disponibles 
 ```
-
 sudo iwlist wlan0 scan | egrep "Cell|ESSID|Signal|Rates"
-
 ```
-
 ### Ncat:
 
 Reverse Shell:
@@ -1354,6 +1353,17 @@ Cambiar el banner cuando accedemos al shell del servidor.
 vim /etc/motd
 ```
 ## Programación (Bash Script)
+
+### Declarar variables:
+
+          mivar="HOLA-MUNDO!!"
+          echo $mivar
+          yes $mivar
+
+### Leer input del usuario:
+
+          read -p "Escríbeme un saludo: " -r saludos
+          echo "$saludos para ti también"
 
 ### For 
 
