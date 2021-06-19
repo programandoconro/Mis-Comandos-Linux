@@ -658,6 +658,7 @@ git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
 git push origin robranch
 git branch -a # Ver las branchs
 git fetch --all # Actualizar las branchs
+git rm --cached myarchivo.txt # Elimina el archivo en todo el historial.
 ```
 Más opciones y comandos de git: 
 ```
