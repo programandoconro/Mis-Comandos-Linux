@@ -115,19 +115,7 @@ En Arch/Manjaro no necesitamos snap, ya en con ``yay`` encontramos todo lo que n
 ```
 yay -S vim code android-studio vlc
 ```
-Para montar un disco, lo ubicamos con ``fdisk -l`` y luego ``sudo mount -rw /nombre/disco /mnt``.
 
-Para saber el porcentaje de uso de los discos disponibles:
-
-```
-df --total -hl
-```
-
-Crear un USB bootable con cualquier imagen de Linux.  
-
-```
- sudo dd bs=4M if=arch.iso of=/dev/sdb status=progress
-```
 Crear y navegar a las carpetas
 ```
 mkdir carpeta
@@ -141,30 +129,6 @@ Saber el directorio en el que estamos
 ```
 pwd
 ```
-Limpiar la pantalla en la terminal
-```
- clear # o Crtl-L
-```
-
-Ver la historia del terminal
-
-```
-history
-```
-* Para limpiar el historial ``history -c`` (bash)
-
-Mostrar toda la estructura de los ficheros:
-
-```
-tree
-```
-
-Montar USB externo
-
-```
-sudo mount -rw /dev/sd /carpeta
-```
-
 Crear un archivo vacio:
 
 ```
@@ -204,7 +168,23 @@ Con el editor nano podemos ver y editar archivos más grandes:
  ```
  
 Utilizando Crlt-x guardamos los cambios. 
+Limpiar la pantalla en la terminal
+```
+ clear # o Crtl-L
+```
 
+Ver la historia del terminal
+
+```
+history
+```
+* Para limpiar el historial ``history -c`` (bash)
+
+Mostrar toda la estructura de los ficheros:
+
+```
+tree
+```
 Copiar archivos de un sitio a otro:
 
  ```
@@ -277,6 +257,19 @@ Para saber dispositivos conectados a los puertos USB:
 
 ```
 lsusb
+```
+Para montar un disco, lo ubicamos con ``fdisk -l`` y luego ``sudo mount -rw /nombre/disco /mnt``.
+
+Para saber el porcentaje de uso de los discos disponibles:
+
+```
+df --total -hl
+```
+
+Crear un USB bootable con cualquier imagen de Linux.  
+
+```
+ sudo dd bs=4M if=arch.iso of=/dev/sdb status=progress
 ```
  
 Ver las conexiones en los sockets de nuestro equipo
