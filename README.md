@@ -1,4 +1,4 @@
-# Una lista de comandos favoritos en Linux, por Ro
+# Una lista de mis comandos favoritos en Linux, por Ro
 
 Privilegios absolutos (root)
 
@@ -279,6 +279,11 @@ ss
 ss -l
 ss | grep tcp
 ss -t -a 
+```
+Para conocer los usuarios logueados en el sistema:
+
+```
+who
 ```
 
 IP local y Wifi.
