@@ -115,34 +115,33 @@ En Arch/Manjaro no necesitamos snap, ya en con ``yay`` encontramos todo lo que n
 ```
 yay -S vim code android-studio vlc
 ```
+Para montar un disco, lo ubicamos con ``fdisk -l`` y luego ``sudo mount -rw /nombre/disco /mnt``.
+
+Para saber el porcentaje de uso de los discos disponibles:
+
+```
+df --total -hl
+```
 
 Crear un USB bootable con cualquier imagen de Linux.  
 
 ```
  sudo dd bs=4M if=arch.iso of=/dev/sdb status=progress
 ```
-
 Crear y navegar a las carpetas
-
 ```
 mkdir carpeta
 cd /carpeta 
 ```
-
 Regresar al directorio anterior
-
 ```
 cd ..
 ```
-
 Saber el directorio en el que estamos
-
 ```
 pwd
 ```
-
 Limpiar la pantalla en la terminal
-
 ```
  clear # o Crtl-L
 ```
