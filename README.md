@@ -1032,7 +1032,14 @@ apt install ... # dnf install ...
 Buscar paquetes que contienen algun comando que requerimos
 
 ```
-apt search comando #(o ``yum search comando``)
+# Debian / Ubuntu
+apt search paquete
+
+# Fedora / Centos
+yum search paquete
+
+# Manjaro / Arch
+pacman -Ss paquete
 ```
 Para ejecutar scripts al iniciar el sistema
 ```
@@ -1041,6 +1048,8 @@ sudo nano .bashrc
 # Escribe el script
 ./script
 ```
+Para seguir ejecutando un comando incluso despues de cerrar la sesión en tu servidor. Usa ``ssh``para entrar en tu servidor. Luego ejecuta ``screen``, esto creará una nueva pantalla, ejecuta el comando que deseas que siga corriendo después de desloguearte y finalmente ``Ctrl`` + ad. El comando seguirá corriendo.
+
 Listar las aplicaciones desktop
 
 ```
