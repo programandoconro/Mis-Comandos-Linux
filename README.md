@@ -655,7 +655,8 @@ git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
 git push origin robranch
 git branch -a # Ver las branchs
 git fetch --all # Actualizar las branchs
-git rm --cached myarchivo.txt # Elimina el archivo en todo el historial.
+git rm --cached myarchivo.txt # Elimina el archivo en todo el historial
+git remote update origin --prune # Actualiza las branchs remotas localmente
 ```
 Más opciones y comandos de git: 
 ```
@@ -926,6 +927,7 @@ docker ps
 docker exec $ID bash
 docker inspect $ID
 docker network ls
+docker image prune -a # borra las imagenes no utilizadas
 ```
 
 Docker-compose
