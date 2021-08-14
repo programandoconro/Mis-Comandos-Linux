@@ -928,6 +928,7 @@ docker exec $ID bash
 docker inspect $ID
 docker network ls
 docker image prune -a # borra las imagenes no utilizadas
+docker system prune # elimina el cache, los containers e imagenes detenidas, etc.
 ```
 
 Docker-compose
