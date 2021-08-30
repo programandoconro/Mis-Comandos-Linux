@@ -933,10 +933,13 @@ docker system prune # elimina el cache, los containers e imagenes detenidas, etc
 
 Docker-compose
 ```
+docker-compose build
 docker-compose up
 docker-compose start
 docker-compose stop
 ```
+
+docker run -it --network host example # para acceder a los puertos del localhost desde el contenedor. 
 
 ### Tor 
 
