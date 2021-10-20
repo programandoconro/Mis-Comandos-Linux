@@ -666,7 +666,9 @@ git config --global user.email you@yourdomain.example.com
 git status
 git log
 git log -p
+git log -S # searchs a word in the commits
 git log --stat --summary
+git log --graph --decorate --oneline
 git help -a 
 git help -g
 ```
@@ -676,10 +678,22 @@ git log --oneline # Para obtener la id del commit al que desear regresar.
 git checkout <commit-id>
 git add . && git commit "Go back" && git push origin <branch>
 ```
-Tutorial de git
-``git help tutorial``
 
-Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
+Extra tips:
+
+* Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
+
+* Puedes crear ``alias`` por ejemplo, para agregar los archivo en el directorio actual y hacer un commit al mismo tiempo:
+
+```
+git config --global alias.ac '!git add . && git commit -m'
+```
+* Buscar archivos que contengan una palabra específica en el código dentro de todo el repositorio con ``git grep 'palabra(s)'``
+
+* Guardar el estado actual del repositorio sin hacer commit con ``git stash``. Usando ``git stash pop`` volvemos al estado en el que estabamos trabajando. 
+
+* Tutorial de git
+``git help tutorial``
 
 ### Tmux:
 
