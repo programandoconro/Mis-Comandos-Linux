@@ -266,6 +266,12 @@ Para saber el porcentaje de uso de los discos disponibles:
 df --total -hl
 ```
 
+Para saber la memoria RAM disponible 
+
+```
+grep MemTotal /proc/meminfo
+```
+
 Crear un USB bootable con cualquier imagen de Linux.  
 
 ```
