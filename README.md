@@ -270,6 +270,8 @@ Para saber la memoria RAM disponible
 
 ```
 grep MemTotal /proc/meminfo
+# o
+free -m
 ```
 
 Crear un USB bootable con cualquier imagen de Linux.  
@@ -593,7 +595,16 @@ Copiar archivos remoto --> local
 ```
 scp user@ip:file.txt /path/to/dest 
 ```
-Comandos a distancia
+Sí hay una ``ssh key`` requerida: 
+Puedes conectar con: 
+```
+ssh -i tu_ssh_key.pem user@server_ip
+```
+Y copiar archivos con:
+```
+scp -r -i tu_ssh_key.pem tu_archivo user@server_ip:~ 
+```
+Para ejecutar comandos a distancia:
 
 ``ssh user@remote.local ls``
 
@@ -950,17 +961,21 @@ docker network ls
 docker image prune -a # borra las imagenes no utilizadas
 docker system prune # elimina el cache, los containers e imagenes detenidas, etc.
 ```
-
-Docker-compose
+Para acceder a los puertos del localhost desde el contenedor: 
+```
+docker run -it --network host example  
+```
+Para limitar el uso de memoria RAM y de CPU:
+```
+docker run -dit --memory="1g" --cpus="1.0" nombre_contenedor
+```
+Uso de ``docker-compose``:
 ```
 docker-compose build
 docker-compose up
 docker-compose start
 docker-compose stop
 ```
-
-docker run -it --network host example # para acceder a los puertos del localhost desde el contenedor. 
-
 ### Tor 
 
 Para navegar de manera anónima.  Simplemente descárgalo de https://www.torproject.org y: 
