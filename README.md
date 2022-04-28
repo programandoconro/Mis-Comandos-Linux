@@ -12,6 +12,14 @@ Si el usuario pertenece al grupo de administradores
 sudo -i
 ``` 
 
+Para ejecutar un comando que requiera permisos de administrador
+
+```
+sudo comando
+```
+** Si olvidamos escribir sudo y nos da un error por ello, podemos usar `sudo!!` para ejecutar el comando anterior con sudo de prefijo
+
+
 Para saber que distro de linux tienes
 
 ```
@@ -172,6 +180,12 @@ Limpiar la pantalla en la terminal
 ```
  clear # o Crtl-L
 ```
+Encontrar un archivo en el sistema:
+
+```
+find / -name archivo
+```
+** En caso de que el archivo se encuentre en una carpeta que requiera permiso, usar `sudo` antes del comando.
 
 Ver la historia del terminal
 
@@ -695,6 +709,13 @@ git log --oneline # Para obtener la id del commit al que desear regresar.
 git checkout <commit-id>
 git add . && git commit "Go back" && git push origin <branch>
 ```
+Volver al commit anterios sin guardar cambios agregados:
+```
+git reset --soft HEAD
+```
+** Podemos usar HEAD~2 para volver dos commit atras de HEAD.
+
+Usando `git reset --hard` seguido del hash del commit, volvemos a dicho commit.
 
 Extra tips:
 
@@ -888,7 +909,7 @@ Editar múltiples líneas:
 
 Seleccinamos con ``V`` y luego usamos ``Ctrl V`` seguido de las teclas de desplazamiento (j, k, l, h, etc...) y el texto a agregar.
 
-Sustituir patrón de texto <- ``:%s 'texto a sustituir''nuevo texto'``.
+Sustituir patrón de texto <- ``:%s 'texto a sustituir'/'nuevo texto'``.
 
 Comentar múltiples líneas:
 
@@ -955,6 +976,7 @@ ENTRYPOINT
 docker build . -t example  
 docker run example
 docker ps
+docker logs
 docker exec $ID bash
 docker inspect $ID
 docker network ls
