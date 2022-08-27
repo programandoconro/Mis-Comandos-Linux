@@ -322,7 +322,14 @@ IP pública
 curl ifconfig.me
 curl https://ipinfo.io/ip
 ```
+Saber la claves Wi-Fi a la que nos hemos conectado:
 
+```
+sudo -i
+cd /etc/NetworkManager/system-connections
+ls
+cat "el archivo wifi"
+```
 Ruta
 
 ```
