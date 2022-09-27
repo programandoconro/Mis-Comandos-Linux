@@ -874,6 +874,8 @@ Seleccionar bloques hacia abajo <- ``v }``.
 
 Seleccionar bloques hacia arriba <- ``v {``.
 
+Seleccionar html tag hacia abajo o arriba <- ``vat``
+
 Funcionalidades:
 
 Mostrar archivos en path <- ``:!ls``.
