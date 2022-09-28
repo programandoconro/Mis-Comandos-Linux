@@ -692,6 +692,8 @@ git push -u origin master
 git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
 git push origin robranch
 git branch -a # Ver las branchs
+git merge <otra-branch> # Une otra branch con la branch en la te encuentras
+git merge --squash <otra-branch> # Igual que el anterior pero junta todo los commits(es necesario hacer un nuevo `git add .` y `git commit -m "mensaje"`)
 git fetch --all # Actualizar las branchs
 git rm --cached myarchivo.txt # Elimina el archivo en todo el historial
 git remote update origin --prune # Actualiza las branchs remotas localmente
@@ -719,6 +721,10 @@ git add . && git commit "Go back" && git push origin <branch>
 Volver al commit anterios sin guardar cambios agregados:
 ```
 git reset --soft HEAD
+```
+En caso que no hayas hecho `git add .`, puedes usar el siguiente comando para volver al commit previo y eliminar los cambios:
+```
+git checkout .     # Bueno cuando los experimentos no salieron bien y quieres volver al commit anterior
 ```
 ** Podemos usar HEAD~2 para volver dos commit atras de HEAD.
 
