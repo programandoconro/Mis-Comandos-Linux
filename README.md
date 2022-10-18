@@ -703,6 +703,7 @@ Más opciones y comandos de git:
 git init
 git config --global user.name "Your Name Comes Here"
 git config --global user.email you@yourdomain.example.com
+git config --list # para saber el nombre e email configurados en git
 git status
 git log
 git log -p
