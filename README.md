@@ -688,6 +688,7 @@ git add . # Agregar todos los archivos
 git add /path/to/file # Agregar un archivo concreto
 git diff --cached 
 git commit -m 'comment'
+git commit --amend -m 'my corrected comment' # Para corregir el mensaje del commit anterior. 
 git push -u origin master
 git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
 git push origin robranch
