@@ -721,9 +721,14 @@ git log --oneline # Para obtener la id del commit al que desear regresar.
 git checkout <commit-id>
 git add . && git commit "Go back" && git push origin <branch>
 ```
-Volver al commit anterios sin guardar cambios agregados:
+Volver al commit anterior sin guardar cambios agregados:
 ```
 git reset --soft HEAD
+```
+Volver a un commit puntual:
+```
+# Busca el commit id con `git log` seguido de
+git reset <commit-id>
 ```
 En caso que no hayas hecho `git add .`, puedes usar el siguiente comando para volver al commit previo y eliminar los cambios:
 ```
