@@ -435,6 +435,17 @@ Browser en terminal
 ```
 elinks https://medium.com/learn-love-code/how-to-set-up-your-professional-data-science-environment-6df74eb06aa4
 ```
+## Shortcuts en la terminal
+
+Para ir al principio del comando: `Ctrl-a`.
+Para ir al final del comando: `Ctrl-e`.
+Para borrar parabra: `Ctrl-w`.
+Limpiar la pantalla: `Ctrl-l`.
+Cancelar: `Ctrl-c`.
+Borrar todo el comando: `Ctrl-u`.
+Salir: `Ctrl-d`.
+
+
 
 ## Comandos comunes que siempre olvido.
 
