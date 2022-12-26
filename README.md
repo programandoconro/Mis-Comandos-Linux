@@ -709,7 +709,11 @@ git merge --squash <otra-branch> # Igual que el anterior pero junta todo los com
 git fetch --all # Actualizar las branchs
 git rm --cached myarchivo.txt # Elimina el archivo en todo el historial
 git remote update origin --prune # Actualiza las branchs remotas localmente
-git stash save "mensaje" # Para hacer stash ("salvar los cambios" sin commit) y agregar un mensaje a dicho stash.
+git stash # ir al commit anterior pero salvando los datos por si acaso quieres usar luego.
+git stash pop # para regresar al stash previo (al que no se le ha hecho commit). 
+git stash push -m "mensaje" # Para hacer stash ("salvar los cambios" sin commit) y agregar un mensaje a dicho stash.
+git stash list # ver la lista de stashs.
+
   ```
 Más opciones y comandos de git: 
 ```
