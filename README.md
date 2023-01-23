@@ -753,6 +753,14 @@ git checkout .     # Bueno cuando los experimentos no salieron bien y quieres vo
 
 Usando `git reset --hard` seguido del hash del commit, volvemos a dicho commit.
 
+Si realizaste un commit pero luego quieres agregar nuevos cambios al mismo sin necesidad de un nuevo commit:
+
+```
+git add . # o agrega lo archivo puntuales
+git commit --amend
+```
+
+
 Extra tips:
 
 * Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
