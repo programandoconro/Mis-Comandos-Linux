@@ -714,7 +714,7 @@ git stash pop # para regresar al stash previo (al que no se le ha hecho commit).
 git stash push -m "mensaje" # Para hacer stash ("salvar los cambios" sin commit) y agregar un mensaje a dicho stash.
 git stash list # ver la lista de stashs.
 
-  ```
+```
 Más opciones y comandos de git: 
 ```
 git init
@@ -760,6 +760,11 @@ git add . # o agrega lo archivo puntuales
 git commit --amend
 ```
 
+Comparar tu branch con develop y mostrar sólo los cambios realizados:
+```
+git diff develop -U0 | grep '^[+-]' | grep -Ev '^(--- a/|\+\+\+ b/)'
+
+```
 
 Extra tips:
 
