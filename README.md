@@ -185,7 +185,14 @@ Encontrar un archivo en el sistema:
 ```
 find / -name archivo
 ```
+
 ** En caso de que el archivo se encuentre en una carpeta que requiera permiso, usar `sudo` antes del comando.
+
+Saber el path de un programa:
+
+```
+whereis programa-nombre
+```
 
 Ver la historia del terminal
 
