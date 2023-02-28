@@ -1267,6 +1267,15 @@ Ejecutar un script cada vez que iniciemos una sesión, por ejemplo, un programa 
 
 ``sudo vim /etc/profile`` y agregamos al final ``sudo python /carpeta/con/el/programa/nombreprograma.py &``
 
+Pasar parámetros a una función: 
+
+```
+miFuncion() {
+   echo Hola "$1"
+}
+miFuncion mundo
+```
+
 ## Hacking:
 
 ### Nmap 
