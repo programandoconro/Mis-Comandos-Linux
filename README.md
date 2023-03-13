@@ -777,6 +777,12 @@ Renombrar varios commits viejos:
 
 Usa `git log --stat` para obtener el sha del commit antiguo. Luego `git rebase -i <sha>`, cambia el texto `pick` por `reword`. Seguido de esto, se van a abrir, uno a uno, editores de texto para cambiar el mensaje de cada commit.  
 
+Hacer `squash` a commits anteriores:
+```
+git rebase -i HEAD~<number of commits>.   # Change  "pick"  with "squash"
+
+```
+
 Extra tips:
 
 * Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
