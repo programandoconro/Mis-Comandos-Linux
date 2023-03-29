@@ -711,6 +711,7 @@ git push -u origin master
 git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
 git push origin robranch
 git branch -a # Ver las branchs
+git branch -m # renombrar la branch actual
 git merge <otra-branch> # Une otra branch con la branch en la te encuentras
 git merge --squash <otra-branch> # Igual que el anterior pero junta todo los commits(es necesario hacer un nuevo `git add .` y `git commit -m "mensaje"`)
 git fetch --all # Actualizar las branchs
