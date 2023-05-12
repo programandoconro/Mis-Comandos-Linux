@@ -783,7 +783,14 @@ Hacer `squash` a commits anteriores:
 git rebase -i HEAD~<number of commits>.   # Change  "pick"  with "squash"
 
 ```
+Es posible forzar una branch a cierto estado anterior y luego usar cherry-pick para utilizar commits específicos. Por ejemplo, supongamos que creamos una branch a partir de feature/branch que tiener muchos commits que develop no. Nosotros hicimos un par de commits adicionales pero ahora queremos solo ese par de commits en develop. 
 
+```
+# IMPORTANTE tener guardados los ids de los commits para el cherry-pick, ya que no aparecerán en el git log luego del reset.
+git reset --HARD develop & git clean -f
+git cherry-pick commitA commitB 
+
+```
 Extra tips:
 
 * Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
