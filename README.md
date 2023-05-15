@@ -791,6 +791,14 @@ git reset --HARD develop & git clean -f
 git cherry-pick commitA commitB 
 
 ```
+Ver los commits recientes a un archivo
+```
+git log -3 {path-del-archivo} # muestra los 3 commits recientes
+```
+Ver los cambios hechos por un commit en un archivo:
+```
+git show {commit-id} -- {path-del-archivo}
+```
 Extra tips:
 
 * Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
