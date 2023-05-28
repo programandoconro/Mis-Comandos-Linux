@@ -1198,6 +1198,10 @@ Move between panes: ``Ctrl b`` + arrows
 
 Create new window: ``Ctrl b`` + c
 
+List windows: `Ctrl b w`
+
+Toggle last window: `Ctrl b l`
+
 Move between windows: ``Ctrl b`` + n
 
 Resize panes:
