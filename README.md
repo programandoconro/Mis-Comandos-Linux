@@ -352,6 +352,13 @@ Si queremos saber donde está un dispositivo USB, disco duro y sus particiones:
  ```
 sudo fdisk -l
  ```
+
+Para conocer el espacio en el disco que un directorio utiliza: 
+
+```
+du -hs
+```
+
 Los procesos del sistema pueden mostrarse con:
 
 ```
