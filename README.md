@@ -1079,7 +1079,9 @@ git diff --cached
 git commit -m 'comment'
 git commit --amend -m 'my corrected comment' # Para corregir el mensaje del commit anterior. 
 git push -u origin master
-git checkout -b 'robranch' #o (git switch robranch) # Cambiar de branch
+git checkout -b 'robranch' # Crear nueva branch
+git checkout miotrabranch # Cambiar de branch
+git swith - # Cambiar a la brach anterior
 git push origin robranch
 git branch -a # Ver las branchs
 git branch -m # renombrar la branch actual
@@ -1175,6 +1177,7 @@ Ver los cambios hechos por un commit en un archivo:
 ```
 git show {commit-id} -- {path-del-archivo}
 ```
+
 Extra tips:
 
 * Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
@@ -1193,25 +1196,27 @@ git config --global alias.ac '!git add . && git commit -m'
 
 ### Tmux
 
-Install: ``apt install tmux``
+Instalar: ``apt install tmux``
 
-Create a new session: ``tmux new -s mysession``
+Crear una session: ``tmux new -s mysession``
 
-Split pane vertically: ``Ctrl b`` + ``%``
+Dividir panel verticalmente: ``Ctrl b`` + ``%``
 
-Split pane horizontally: ``Ctrl b`` + ``"``
+Dividir panel horizontalmente: ``Ctrl b`` + ``"``
 
-Move between panes: ``Ctrl b`` + arrows
+Moverse enter panels: ``Ctrl b`` + arrows # puede ser remapeado al estilo vim motion
 
-Create new window: ``Ctrl b`` + c
+Crear nueva ventana: ``Ctrl b`` + c
 
-List windows: `Ctrl b w`
+Listar ventanas: `Ctrl b w`
 
-Toggle last window: `Ctrl b l`
+Ir a la ventana pasada: `Ctrl b l`
 
-Move between windows: ``Ctrl b`` + n
+Ir a la ventana anterior: `Ctrl b p`
 
-Resize panes:
+Ir a la ventana siguiente: `Ctrl b n`
+
+Cambiar el size de la ventana:
 
 ``Ctrl b`` + ``:`` + 
 
@@ -1228,19 +1233,19 @@ resize-pane -t 2 20 (Resizes the pane with the id of 2 down by 20 cells)
 resize-pane -t -L 20 (Resizes the pane with the id of 2 left by 20 cells)
 ```
 
-Detach from session: ``Ctrl b`` + d
+Salir de la session: ``Ctrl b`` + d
 
-Switch sessions: ``Ctrl b`` + s
+Cambiar sessions: ``Ctrl b`` + s
 
-To check session: ``tmux ls``
+Listar las sessions: ``tmux ls``
 
-To attach to a session: ``tmux attach -t mysession``
+Adjuntar un session: ``tmux attach -t mysession``
 
-To kill a session, simply use: ``exit``
+Salir de una session: ``exit`` o ``Ctrl b x``
 
-Extra ones:
+Extras:
 
-Big clock: ``Ctrl b`` + ``t``
+Reloj: ``Ctrl b`` + ``t``
 
 Shortcuts: ``Ctrl b`` + ``?``
 
@@ -1268,7 +1273,7 @@ Básicos:
 
 ``l`` -> derecha.
 
-``o`` -> insertar + línea adicional.
+``o`` -> insertar + línea adicional abajo, ``O`` insertar + línea arriba.
 
 ``u`` -> undo, deshacer.
 
@@ -1276,9 +1281,8 @@ Básicos:
 
 ``y`` -> copiar.
 
-``d`` -> borrar (cortar).
-
-``p`` -> pegar.
+``d`` -> borrar (cortar), ``dd`` -> cortar línea, ``dw`` cortar palabra desde el sitio, ``daw`` cortar palabra entera, ``da"`` borra palabra dentro de "" 
+``p`` -> pegar siguient línea y ``P`` para pegar en misma línea.
 
 ``a`` -> insertar a la derecha del cursor ``A`` -> inserta al final de la línea.
 
@@ -1350,7 +1354,7 @@ Ir al inicio <- ``gg``. Ir al final ``G``. Mostrar status ``Ctrl + g``.
 
 Ergonómicos:
 
-Salir <- ``Z Q``
+Salir <- ``Z Q``v, ``:qa!``
 
 ``Ctrl c``-> Modo Normal.
 
@@ -1360,7 +1364,7 @@ Borrar y editar directamente dentro de una función <- ``c i {``
 
 ``/`` -> buscar, ``n`` siguiente y ``N`` anterior
 
-``Ctrl v`` -> Bloques visuales
+``Ctrl v`` -> Bloques visuales. Seguido de ``I`` editar y ``ESC`` permite cambiar las líneas seleccionadas.
 
 ``.`` -> Rehace el último comando en un sito nuevo.
 
@@ -1457,6 +1461,12 @@ Para limitar el uso de memoria RAM y de CPU:
 ```
 docker run -dit --memory="1g" --cpus="1.0" nombre_contenedor
 ```
+Puedes pasarle un archivo `dotfiles` con:
+```
+docker run --env-files .env-my-path -it nombre_contenedor
+```
+O pasar variable de entorno (.env) con `-e mysecret=value`
+
 Uso de ``docker-compose``:
 ```
 docker-compose build
