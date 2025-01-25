@@ -170,7 +170,7 @@ touch nombrearchivo
 Crear un archivo con un texto corto:
 
 ```
- cho "Texto corto" > nombrearchivo
+ echo "Texto corto" > nombrearchivo
 ```
 
 Si utilizamos >> agregamos el texto sin reemplazar el archivo. 
