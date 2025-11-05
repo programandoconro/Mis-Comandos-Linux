@@ -805,6 +805,14 @@ miFuncion() {
 }
 miFuncion mundo
 ```
+Cambiar DNS:
+
+Puedes apuntar un servidor externo a una ip interna. En `etc/hosts` agrega la ip local a la que quieres apuntar seguida del servidor externo que quieres sobre-escribir.
+```
+192.168.11.7 nombre-del-dominio-externo
+```
+De esta forma, es posible acceder a tu servidor local usando el nombre del dominio de tu servidor externo.
+
 ## Hacking
 
 ### Nmap 
