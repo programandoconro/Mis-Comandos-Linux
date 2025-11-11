@@ -1185,23 +1185,12 @@ Ver los cambios hechos por un commit en un archivo:
 ```
 git show {commit-id} -- {path-del-archivo}
 ```
-Vim Macros:
-Podemos grabar movimientos complejos para reproducirlos después en otras partes. Muy útil cuando hay un patrón concreto y complejo que queremos repetir automáticamente.
-Comenzamos con grabar con  `q` seguido de una letra que va a representar el registro donde guardaremos la combinación. Por ejemplo, la letra a.
+Revertir un archivo a su estado en otra branch, por ejemplo, en develop:
 ```
-qa
-```
-Ahora empezamos el patrón, por ejemplo, agregar un `div` de html al principio y final de una línea
-```
-0i<div><ESC>$a</div><ESC>q
-```
-Esta combinación va al principio de la línea con `0`, luego modo de insertar con `i`, seguido del texto que queremos agreager al principio (<div>). Vamos a normal mode con `ESC`, al final de la línea con `$` seguido de `a` para insertar luego del último caracter. Agregamos el texto `</div>` y terminamos de grabar el macro con `ESC` y `q`.
+git checkout origin/develop -- el_path_del_archivo_a_revertir
 
-Para ejecutar el comando en una nueva línea, usamos
 ```
-@a
-```
-Recordando que `a` era el registro donde guardamos el movimiento.
+
 Extra tips:
 
 * Si creas un archivo ``.gitignore`` en el directorio, git ignora los archivos que determines.
@@ -1443,6 +1432,24 @@ Encapsular un ``tag``  con otro ``tag`` facilmente. Útil para react, react-nati
 Selecciona el tag a encapsular con ``v``, luego utiliza ``S`` y escribe el tag que va a encapsular al anterior, por ejemplo ``View`` o ``div``.  
 
 `Ctrl ^` Para alternar entre archivos.
+
+Vim Macros:
+Podemos grabar movimientos complejos para reproducirlos después en otras partes. Muy útil cuando hay un patrón concreto y complejo que queremos repetir automáticamente.
+Comenzamos con grabar con  `q` seguido de una letra que va a representar el registro donde guardaremos la combinación. Por ejemplo, la letra a.
+```
+qa
+```
+Ahora empezamos el patrón, por ejemplo, agregar un `div` de html al principio y final de una línea
+```
+0i<div><ESC>$a</div><ESC>q
+```
+Esta combinación va al principio de la línea con `0`, luego modo de insertar con `i`, seguido del texto que queremos agreager al principio (<div>). Vamos a normal mode con `ESC`, al final de la línea con `$` seguido de `a` para insertar luego del último caracter. Agregamos el texto `</div>` y terminamos de grabar el macro con `ESC` y `q`.
+
+Para ejecutar el comando en una nueva línea, usamos
+```
+@a
+```
+Recordando que `a` era el registro donde guardamos el movimiento.
 
 
 ## Docker
