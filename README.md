@@ -264,9 +264,9 @@ Para eliminar archivos y carpetas:
  ```
  rm nombrearchivo
  rm -r /carpeta
- 
 ```
-Cuidado, ``#sudo rm -r /*``  destroza nuestro sistema, elimina todo
+Cuidado, ``#sudo rm -r /*``  destroza nuestro sistema, elimina todo.
+La flag `-f` ignora errores si estos ocurren, por ejemplo si el archivo no existe.set -e  # stop if any command fails
 
 Crear links a archivos es sencillo, por ejemplo, al "``archivo1``":
 
@@ -1555,6 +1555,9 @@ amixer sset 'PCM' 100%
 
           read -p "Escríbeme un saludo: " -r saludos
           echo "$saludos para ti también"
+
+### Detener el script en caso de errores:
+         set -e
 
 ### For 
 
