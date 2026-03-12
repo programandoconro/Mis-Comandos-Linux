@@ -1188,7 +1188,10 @@ git show {commit-id} -- {path-del-archivo}
 Revertir un archivo a su estado en otra branch, por ejemplo, en develop:
 ```
 git checkout origin/develop -- el_path_del_archivo_a_revertir
-
+```
+Identificar la branch a partir de la cual fue creada la branch actual
+```
+ git reflog | grep "checkout: moving from" | head -1
 ```
 
 Extra tips:
