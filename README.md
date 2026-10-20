@@ -16,7 +16,7 @@
 13. [Vim](#vim)
 14. [Docker](#docker)
 15. [IoT](#iot)
-16. [Programación (Bash Scripting)](#programación-(bash-sripting))
+16. [Programar con bash](#programar-con-bash)
 17. [Links](#links)
 
 
@@ -1546,13 +1546,18 @@ Busca el dispositivo y ajustar el volumen
 amixer sset 'PCM' 100%
 ```
 
-## Programación (Bash Sripting)
+## Programar con bash
 
 ### Declarar variables:
 
           mivar="HOLA-MUNDO!!"
           echo $mivar
           yes $mivar
+          
+### Sustituir comandos
+
+          echo "Mi nombre es $(whoami)"
+          echo "Mi path actual es $(pwd)"
 
 ### Leer input del usuario:
 
